@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Résumé Article - RSS22</title>
+</head>
+<body>
+<table th:if="${!items.isEmpty()}">
+    <tr>
+        <th>GUID</th>
+        <th>Date</th>
+        <th>Titre</th>
+    </tr>
+    <tr th:each="item : ${items}">
+        <td th:text="${item.guid}"/>
+        <td th:text="${item.date}"/>
+        <td th:text="${item.title}"/>
+    </tr>
+</table>
+</body>
+</html>
