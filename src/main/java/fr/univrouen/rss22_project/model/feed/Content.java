@@ -2,8 +2,8 @@ package fr.univrouen.rss22_project.model.feed;
 
 import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlValue;
-
 public class Content {
+
     @XmlAttribute(required = true)
     private ContentType type;
     @XmlAttribute
@@ -20,5 +20,17 @@ public class Content {
             content = data;
         else
             href = data;
+    }
+
+    public ContentType getType() {
+        return type;
+    }
+
+    public String getHref() {
+        return href;
+    }
+
+    public String getContent() {
+        return content;
     }
 }

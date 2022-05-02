@@ -1,16 +1,17 @@
 package fr.univrouen.rss22_project.model.feed;
 
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.*;
 
 @XmlAccessorType(XmlAccessType.NONE)
+//@XmlTransient
+//@XmlSeeAlso({Author.class,Contributor.class})
 public abstract class Person {
-    @XmlElement
+
+   @XmlElement
     protected String name;
-    @XmlElement
+   @XmlElement
     protected String email= null;
-    @XmlElement
+   @XmlElement
     protected Link uri = null;
 
     public Person() {
@@ -22,5 +23,17 @@ public abstract class Person {
         this.name = name;
         this.email = email;
         this.uri = uri;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public Link getUri() {
+        return uri;
     }
 }

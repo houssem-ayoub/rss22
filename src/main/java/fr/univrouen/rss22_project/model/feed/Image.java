@@ -25,4 +25,20 @@ public class Image {
         this.alt = alt;
         this.length = length;
     }
+
+    public String getType() {
+        return type;
+    }
+
+    public String getHref() {
+        return href;
+    }
+
+    public String getAlt() {
+        return alt;
+    }
+
+    public String getLength() {
+        return length;
+    }
 }

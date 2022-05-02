@@ -1,10 +1,10 @@
 package fr.univrouen.rss22_project.model.feed;
 
 
-
 import javax.xml.bind.annotation.*;
-import java.util.ArrayList;
 import java.util.Collection;
+import java.util.HashSet;
+import java.util.Set;
 
 @XmlAccessorType(XmlAccessType.NONE)
 @XmlRootElement(name = "feed", namespace = "http://univrouen.fr/rss22")
@@ -18,12 +18,12 @@ public class Feed {
     @XmlElement
     private String copyright;
     @XmlElement(name = "link")
-    private ArrayList<Link> links;
+    private final Set<Link> links;
     @XmlElement(name = "item")
-    private ArrayList<Item> items;
+    private final Set<Item> items;
     public Feed(){
-        links = new ArrayList<>();
-        items = new ArrayList<>(10);
+        links = new HashSet<>();
+        items = new HashSet<>(10);
     }
     public Feed(String lang, String title, String pubDate, String copyright) {
         this();
@@ -32,10 +32,22 @@ public class Feed {
         this.pubDate = pubDate;
         this.copyright = copyright;
     }
+    public String getTitle(){
+        return this.title;
+    }
+
+    public String getPubDate() {
+        return pubDate;
+    }
+
     public void addLinks(Collection<Link> links){
         this.links.addAll(links);
     }
     public void addItems(Collection<Item> items){
         this.items.addAll(items);
+    }
+
+    public Set<Item> getItems() {
+        return items;
     }
 }
