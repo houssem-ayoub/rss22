@@ -1,20 +1,20 @@
-package fr.univrouen.rss22_project.model.feed;
+package fr.univrouen.rss22_project.model.xml;
 
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlRootElement;
 
-@XmlRootElement(name = "contributor")
+
+@XmlRootElement(name = "author")
 @XmlAccessorType(XmlAccessType.NONE)
-public class Contributor extends Person{
-    public Contributor() {
+public class Author extends Person{
+    public Author() {
     }
 
-    public Contributor(String name) {
+    public Author(String name) {
         super(name);
     }
-
-    public Contributor(String name, String email, Link uri) {
+    public Author(String name, String email, Link uri) {
         super(name, email, uri);
     }
 }

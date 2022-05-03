@@ -2,6 +2,8 @@ package fr.univrouen.rss22_project.model.orm;
 
 import fr.univrouen.rss22_project.model.resume.ItemResume;
 import org.hibernate.annotations.GenericGenerator;
+import org.hibernate.annotations.Type;
+import org.joda.time.DateTime;
 
 import javax.persistence.*;
 import java.util.HashSet;
@@ -40,7 +42,8 @@ public class Item {
             )
     })
     private Set<Category> categories;
-    private String date;
+    @Column(columnDefinition = "DATETIME(3)")
+    private DateTime date;
     private boolean isUpdated;
     @OneToOne(targetEntity = Image.class, cascade = CascadeType.ALL)
     private Image image;
@@ -58,7 +61,7 @@ public class Item {
         contributors = new HashSet<>();
     }
 
-    public Item(Feed feed,String title, Set<Category> categories, String date, boolean isUpdated, Image image, Content content, Set<Person> contributors) {
+    public Item(Feed feed,String title, Set<Category> categories, DateTime date, boolean isUpdated, Image image, Content content, Set<Person> contributors) {
         this.title = title;
         this.categories = categories;
         this.date = date;
@@ -88,10 +91,10 @@ public class Item {
         this.categories = categories;
     }
 
-    public fr.univrouen.rss22_project.model.feed.Item toXMLObject(){
-        fr.univrouen.rss22_project.model.feed.Image image1 = image == null ? null : image.toXMLObject();
-        fr.univrouen.rss22_project.model.feed.Content content1 = content == null ? null : content.toXmlObject();
-        fr.univrouen.rss22_project.model.feed.Item item = new fr.univrouen.rss22_project.model.feed.Item(guid,title,date,!isUpdated,image1,content1);
+    public fr.univrouen.rss22_project.model.xml.Item toXMLObject(){
+        fr.univrouen.rss22_project.model.xml.Image image1 = image == null ? null : image.toXMLObject();
+        fr.univrouen.rss22_project.model.xml.Content content1 = content == null ? null : content.toXmlObject();
+        fr.univrouen.rss22_project.model.xml.Item item = new fr.univrouen.rss22_project.model.xml.Item(guid,title,date,!isUpdated,image1,content1);
         item.addPerson(contributors.stream().map(
                 Person::toXMLObject
         ).collect(Collectors.toList()));

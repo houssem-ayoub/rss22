@@ -23,7 +23,7 @@ public class Image {
         this.length = length;
     }
 
-    fr.univrouen.rss22_project.model.feed.Image toXMLObject(){
-        return new fr.univrouen.rss22_project.model.feed.Image(type,href,alt,length);
+    fr.univrouen.rss22_project.model.xml.Image toXMLObject(){
+        return new fr.univrouen.rss22_project.model.xml.Image(type,href,alt,length);
     }
 }

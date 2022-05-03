@@ -1,6 +1,6 @@
 package fr.univrouen.rss22_project.model.orm;
 
-import fr.univrouen.rss22_project.model.feed.ContentType;
+import fr.univrouen.rss22_project.model.xml.ContentType;
 
 import javax.persistence.*;
 
@@ -22,10 +22,10 @@ public class Content {
         this.text = text;
     }
 
-    fr.univrouen.rss22_project.model.feed.Content toXmlObject(){
+    fr.univrouen.rss22_project.model.xml.Content toXmlObject(){
         if(isLink){
-            return new fr.univrouen.rss22_project.model.feed.Content(ContentType.SRC,text);
+            return new fr.univrouen.rss22_project.model.xml.Content(ContentType.SRC,text);
         }
-        return new fr.univrouen.rss22_project.model.feed.Content(ContentType.TEXT,text);
+        return new fr.univrouen.rss22_project.model.xml.Content(ContentType.TEXT,text);
     }
 }

@@ -1,7 +1,11 @@
-package fr.univrouen.rss22_project.model.feed;
+package fr.univrouen.rss22_project.model.xml;
 
+
+import fr.univrouen.rss22_project.model.adapter.XMLDateTimeAdapter;
+import org.joda.time.DateTime;
 
 import javax.xml.bind.annotation.*;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 import java.util.*;
 
 @XmlRootElement(name = "item")
@@ -14,9 +18,11 @@ public class Item {
     @XmlElement(name = "category")
     Set<Category> categories;
     @XmlElement
-    private String published = null;
+    @XmlJavaTypeAdapter(XMLDateTimeAdapter.class)
+    private DateTime published = null;
     @XmlElement
-    private String updated = null;
+    @XmlJavaTypeAdapter(XMLDateTimeAdapter.class)
+    private DateTime updated = null;
     @XmlElement
     private Image image = null;
     @XmlElement
@@ -33,7 +39,7 @@ public class Item {
         personSet = new HashSet<>();
     }
 
-    public Item(String guid, String title, String date, boolean isPublished) {
+    public Item(String guid, String title, DateTime date, boolean isPublished) {
         this();
         this.guid = guid;
         this.title = title;
@@ -42,7 +48,7 @@ public class Item {
         else
             this.updated = date;
     }
-    public Item(String guid, String title, String date, boolean isPublished,Image image, Content content) {
+    public Item(String guid, String title, DateTime date, boolean isPublished,Image image, Content content) {
         this();
         this.guid = guid;
         this.title = title;
@@ -66,11 +72,11 @@ public class Item {
         return categories;
     }
 
-    public String getPublished() {
+    public DateTime getPublished() {
         return published;
     }
 
-    public String getUpdated() {
+    public DateTime getUpdated() {
         return updated;
     }
 

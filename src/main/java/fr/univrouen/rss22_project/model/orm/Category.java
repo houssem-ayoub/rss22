@@ -25,7 +25,7 @@ public class Category {
         return term;
     }
 
-    fr.univrouen.rss22_project.model.feed.Category toXmlObject(){
-        return new fr.univrouen.rss22_project.model.feed.Category(term);
+    fr.univrouen.rss22_project.model.xml.Category toXmlObject(){
+        return new fr.univrouen.rss22_project.model.xml.Category(term);
     }
 }

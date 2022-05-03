@@ -1,4 +1,4 @@
-package fr.univrouen.rss22_project.model.feed;
+package fr.univrouen.rss22_project.model.xml;
 
 import javax.xml.bind.annotation.XmlAttribute;
 

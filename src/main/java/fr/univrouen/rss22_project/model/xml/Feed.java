@@ -1,7 +1,11 @@
-package fr.univrouen.rss22_project.model.feed;
+package fr.univrouen.rss22_project.model.xml;
 
+
+import fr.univrouen.rss22_project.model.adapter.XMLDateTimeAdapter;
+import org.joda.time.DateTime;
 
 import javax.xml.bind.annotation.*;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 import java.util.Collection;
 import java.util.HashSet;
 import java.util.Set;
@@ -14,7 +18,8 @@ public class Feed {
     @XmlElement
     private String title;
     @XmlElement
-    private String pubDate;
+    @XmlJavaTypeAdapter(XMLDateTimeAdapter.class)
+    private DateTime pubDate;
     @XmlElement
     private String copyright;
     @XmlElement(name = "link")
@@ -25,18 +30,12 @@ public class Feed {
         links = new HashSet<>();
         items = new HashSet<>(10);
     }
-    public Feed(String lang, String title, String pubDate, String copyright) {
-        this();
-        this.lang = lang;
-        this.title = title;
-        this.pubDate = pubDate;
-        this.copyright = copyright;
-    }
+
     public String getTitle(){
         return this.title;
     }
 
-    public String getPubDate() {
+    public DateTime getPubDate() {
         return pubDate;
     }
 

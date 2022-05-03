@@ -1,7 +1,7 @@
 package fr.univrouen.rss22_project.model.service;
 
 import fr.univrouen.rss22_project.model.adapter.FeedAdapter;
-import fr.univrouen.rss22_project.model.feed.Feed;
+import fr.univrouen.rss22_project.model.xml.Feed;
 import fr.univrouen.rss22_project.repository.FeedRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

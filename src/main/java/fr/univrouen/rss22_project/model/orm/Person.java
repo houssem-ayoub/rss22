@@ -1,7 +1,7 @@
 package fr.univrouen.rss22_project.model.orm;
 
-import fr.univrouen.rss22_project.model.feed.Author;
-import fr.univrouen.rss22_project.model.feed.Contributor;
+import fr.univrouen.rss22_project.model.xml.Author;
+import fr.univrouen.rss22_project.model.xml.Contributor;
 
 import javax.persistence.*;
 
@@ -36,8 +36,8 @@ public class Person {
         return name;
     }
 
-    fr.univrouen.rss22_project.model.feed.Person toXMLObject(){
-        fr.univrouen.rss22_project.model.feed.Link link = uri == null? null : uri.toXMLObject();
+    fr.univrouen.rss22_project.model.xml.Person toXMLObject(){
+        fr.univrouen.rss22_project.model.xml.Link link = uri == null? null : uri.toXMLObject();
         if(isAuthor){
             return new Author(name,email,link);
         }

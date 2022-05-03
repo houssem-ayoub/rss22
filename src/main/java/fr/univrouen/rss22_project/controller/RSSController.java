@@ -1,7 +1,7 @@
 package fr.univrouen.rss22_project.controller;
 
-import fr.univrouen.rss22_project.model.feed.Feed;
-import fr.univrouen.rss22_project.model.feed.Item;
+import fr.univrouen.rss22_project.model.xml.Feed;
+import fr.univrouen.rss22_project.model.xml.Item;
 import fr.univrouen.rss22_project.model.resume.ResumeItemList;
 import fr.univrouen.rss22_project.model.service.FeedService;
 import fr.univrouen.rss22_project.model.service.ItemService;

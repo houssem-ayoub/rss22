@@ -1,7 +1,7 @@
 package fr.univrouen.rss22_project.model.orm;
 
 
-import fr.univrouen.rss22_project.model.feed.LinkRel;
+import fr.univrouen.rss22_project.model.xml.LinkRel;
 
 import javax.persistence.*;
 
@@ -25,8 +25,8 @@ public class Link {
         this.href = href;
     }
 
-    fr.univrouen.rss22_project.model.feed.Link toXMLObject(){
-        return new fr.univrouen.rss22_project.model.feed.Link(
+    fr.univrouen.rss22_project.model.xml.Link toXMLObject(){
+        return new fr.univrouen.rss22_project.model.xml.Link(
                 rel.equals("SELF")? LinkRel.SELF:LinkRel.ALTERNATE,
                 type, href);
     }
