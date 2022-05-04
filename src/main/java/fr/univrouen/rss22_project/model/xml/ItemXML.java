@@ -10,13 +10,13 @@ import java.util.*;
 
 @XmlRootElement(name = "item")
 @XmlAccessorType(XmlAccessType.NONE)
-public class Item {
+public class ItemXML {
     @XmlAttribute
     private String guid = null;
     @XmlElement
     private String title;
     @XmlElement(name = "category")
-    Set<Category> categories;
+    Set<CategoryXML> categories;
     @XmlElement
     @XmlJavaTypeAdapter(XMLDateTimeAdapter.class)
     private DateTime published = null;
@@ -24,31 +24,22 @@ public class Item {
     @XmlJavaTypeAdapter(XMLDateTimeAdapter.class)
     private DateTime updated = null;
     @XmlElement
-    private Image image = null;
+    private ImageXML image = null;
     @XmlElement
-    private Content content = null;
+    private ContentXML content = null;
    //@XmlAnyElement(lax = true)
    @XmlElementRefs({
-           @XmlElementRef(name = "author",type = Author.class),
-           @XmlElementRef(name = "contributor",type = Contributor.class),
+           @XmlElementRef(name = "author",type = AuthorXML.class),
+           @XmlElementRef(name = "contributor",type = ContributorXML.class),
    })
-    private final Set<Person> personSet;
+    private Set<PersonXML> personSet;
 
-    public Item() {
+    public ItemXML() {
         categories = new HashSet<>();
         personSet = new HashSet<>();
     }
 
-    public Item(String guid, String title, DateTime date, boolean isPublished) {
-        this();
-        this.guid = guid;
-        this.title = title;
-        if(isPublished)
-            this.published = date;
-        else
-            this.updated = date;
-    }
-    public Item(String guid, String title, DateTime date, boolean isPublished,Image image, Content content) {
+    public ItemXML(String guid, String title, DateTime date, boolean isPublished, ImageXML image, ContentXML content) {
         this();
         this.guid = guid;
         this.title = title;
@@ -68,7 +59,7 @@ public class Item {
         return title;
     }
 
-    public Set<Category> getCategories() {
+    public Set<CategoryXML> getCategories() {
         return categories;
     }
 
@@ -80,29 +71,24 @@ public class Item {
         return updated;
     }
 
-    public Image getImage() {
+    public ImageXML getImage() {
         return image;
     }
 
-    public Content getContent() {
+    public ContentXML getContent() {
         return content;
     }
 
-    public Set<Person> getPersonSet() {
+    public Set<PersonXML> getPersonSet() {
         return personSet;
     }
 
-    public void addCategories(Collection<Category> categories) {
-        this.categories.addAll(categories);
+    public void setCategories(Collection<CategoryXML> categories) {
+        this.categories = Set.copyOf(categories);
+
     }
 
-    public void addPerson(Collection<Person> people) {
-        this.personSet.addAll(people);
-    }
-
-    @Override
-    public String toString() {
-        return ("Article : " + title + "\n(" + guid
-                + ") Le = " + published);
+    public void setPersonCollection(Collection<PersonXML> people) {
+        this.personSet = Set.copyOf(people);
     }
 }

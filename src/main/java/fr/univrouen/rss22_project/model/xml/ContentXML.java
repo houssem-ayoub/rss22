@@ -2,27 +2,25 @@ package fr.univrouen.rss22_project.model.xml;
 
 import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlValue;
-public class Content {
-
+public class ContentXML {
     @XmlAttribute(required = true)
-    private ContentType type;
+    private ContentTypeXML type;
     @XmlAttribute
     private String href = null;
     @XmlValue
     private String content = null;
-
-    public Content() {
+    public ContentXML() {
     }
 
-    public Content(ContentType type, String data) {
+    public ContentXML(ContentTypeXML type, String data) {
         this.type = type;
-        if(type == ContentType.TEXT)
+        if(type == ContentTypeXML.TEXT)
             content = data;
         else
             href = data;
     }
 
-    public ContentType getType() {
+    public ContentTypeXML getType() {
         return type;
     }
 

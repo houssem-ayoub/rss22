@@ -1,19 +1,23 @@
 package fr.univrouen.rss22_project.model.adapter;
 
-import fr.univrouen.rss22_project.model.orm.Feed;
-import fr.univrouen.rss22_project.model.orm.Item;
+import fr.univrouen.rss22_project.model.orm.FeedORM;
+import fr.univrouen.rss22_project.model.orm.ItemORM;
+import fr.univrouen.rss22_project.model.xml.FeedXML;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
-import java.util.Set;
-import java.util.stream.Collectors;
-
+import java.util.Collection;
+@Component
 public class FeedAdapter {
+    @Autowired
+    ItemAdapter itemAdapter;
 
-    public static Feed adaptToORM(fr.univrouen.rss22_project.model.xml.Feed feedXML){
-        return new Feed(feedXML.getTitle(), feedXML.getPubDate());
+    private FeedORM adaptToORM(FeedXML feedXML){
+        return new FeedORM(feedXML.getTitle(), feedXML.getPubDate());
+
     }
-    public static Set<Item> getORMItems(fr.univrouen.rss22_project.model.xml.Feed feedXML, Feed feedORM){
-        return feedXML.getItems().stream().map(
-                item -> ItemAdapter.adaptToORM(item,feedORM)
-        ).collect(Collectors.toSet());
+    public Collection<ItemORM> getORMItems(FeedXML feedXML){
+        FeedORM feedORM = adaptToORM(feedXML);
+        return itemAdapter.adaptAllToORM(feedXML.getItems(),feedORM);
     }
 }

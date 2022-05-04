@@ -1,4 +1,4 @@
-package fr.univrouen.rss22_project.model.resume;
+package fr.univrouen.rss22_project.model.xml.resume;
 
 import fr.univrouen.rss22_project.model.adapter.XMLDateTimeAdapter;
 import org.joda.time.DateTime;
@@ -8,7 +8,7 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 @XmlAccessorType(XmlAccessType.NONE)
 @XmlRootElement(name = "item")
-public class ItemResume {
+public class ItemXMLResume {
     @XmlAttribute
     private String guid;
     @XmlElement
@@ -17,10 +17,10 @@ public class ItemResume {
     @XmlJavaTypeAdapter(XMLDateTimeAdapter.class)
     private DateTime date;
 
-    public ItemResume() {
+    public ItemXMLResume() {
     }
 
-    public ItemResume(String guid, String title, DateTime date) {
+    public ItemXMLResume(String guid, String title, DateTime date) {
         this.guid = guid;
         this.title = title;
         this.date = date;

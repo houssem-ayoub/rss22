@@ -3,21 +3,18 @@ package fr.univrouen.rss22_project.model.xml;
 import javax.xml.bind.annotation.*;
 
 @XmlAccessorType(XmlAccessType.NONE)
-public abstract class Person {
+public abstract class PersonXML {
 
    @XmlElement
     protected String name;
    @XmlElement
     protected String email= null;
    @XmlElement
-    protected Link uri = null;
+    protected LinkXML uri = null;
 
-    public Person() {
+    public PersonXML() {
     }
-    public Person(String name) {
-        this.name = name;
-    }
-    public Person(String name, String email, Link uri) {
+    public PersonXML(String name, String email, LinkXML uri) {
         this.name = name;
         this.email = email;
         this.uri = uri;
@@ -31,7 +28,7 @@ public abstract class Person {
         return email;
     }
 
-    public Link getUri() {
+    public LinkXML getUri() {
         return uri;
     }
 }

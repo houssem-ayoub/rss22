@@ -7,25 +7,24 @@ import javax.xml.bind.annotation.XmlRootElement;
 
 @XmlAccessorType(XmlAccessType.NONE)
 @XmlRootElement(name = "link")
-public class Link {
-
+public class LinkXML {
     @XmlAttribute(required = true)
-    private LinkRel rel;
+    private LinkRelXML rel;
     @XmlAttribute(required = true)
     private String type;
     @XmlAttribute(required = true)
     private String href;
 
-    public Link() {
+    public LinkXML() {
     }
 
-    public Link(LinkRel rel, String type, String href) {
+    public LinkXML(LinkRelXML rel, String type, String href) {
         this.rel = rel;
         this.type = type;
         this.href = href;
     }
 
-    public LinkRel getRel() {
+    public LinkRelXML getRel() {
         return rel;
     }
 

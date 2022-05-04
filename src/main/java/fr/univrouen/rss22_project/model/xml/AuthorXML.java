@@ -7,14 +7,10 @@ import javax.xml.bind.annotation.XmlRootElement;
 
 @XmlRootElement(name = "author")
 @XmlAccessorType(XmlAccessType.NONE)
-public class Author extends Person{
-    public Author() {
+public class AuthorXML extends PersonXML {
+    public AuthorXML() {
     }
-
-    public Author(String name) {
-        super(name);
-    }
-    public Author(String name, String email, Link uri) {
+    public AuthorXML(String name, String email, LinkXML uri) {
         super(name, email, uri);
     }
 }

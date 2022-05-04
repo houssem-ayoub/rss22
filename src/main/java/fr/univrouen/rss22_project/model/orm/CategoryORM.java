@@ -3,18 +3,20 @@ package fr.univrouen.rss22_project.model.orm;
 import javax.persistence.*;
 
 @Entity(name = "categories")
-public class Category {
+@Table(name = "categories")
+public class CategoryORM {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "category_id")
     private Long id;
     @Column(nullable = false,unique = true)
     private String term = null;
 
 
-    public Category() {
+    public CategoryORM() {
     }
 
-    public Category(String term) {
+    public CategoryORM(String term) {
         this.term = term;
     }
     public Long getId() {
@@ -23,9 +25,5 @@ public class Category {
 
     public String getTerm() {
         return term;
-    }
-
-    fr.univrouen.rss22_project.model.xml.Category toXmlObject(){
-        return new fr.univrouen.rss22_project.model.xml.Category(term);
     }
 }

@@ -1,18 +1,13 @@
 package fr.univrouen.rss22_project.model.xml;
 
-import javax.persistence.Column;
 import javax.xml.bind.annotation.XmlAttribute;
-public class Category {
-
+public class CategoryXML {
     @XmlAttribute(required = true)
-    @Column(unique = true)
     private String term;
-
-    public Category(String term) {
-        this.term = term;
+    public CategoryXML() {
     }
-
-    public Category() {
+    public CategoryXML(String term) {
+        this.term = term;
     }
 
     public String getTerm() {

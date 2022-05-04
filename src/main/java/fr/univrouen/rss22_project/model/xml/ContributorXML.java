@@ -6,15 +6,11 @@ import javax.xml.bind.annotation.XmlRootElement;
 
 @XmlRootElement(name = "contributor")
 @XmlAccessorType(XmlAccessType.NONE)
-public class Contributor extends Person{
-    public Contributor() {
+public class ContributorXML extends PersonXML {
+    public ContributorXML() {
     }
 
-    public Contributor(String name) {
-        super(name);
-    }
-
-    public Contributor(String name, String email, Link uri) {
+    public ContributorXML(String name, String email, LinkXML uri) {
         super(name, email, uri);
     }
 }
