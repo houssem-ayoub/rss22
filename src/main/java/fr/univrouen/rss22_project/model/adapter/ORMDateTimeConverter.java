@@ -12,9 +12,7 @@ public class ORMDateTimeConverter implements AttributeConverter<DateTime,String>
     private final DateTimeFormatter df = DateTimeFormat.forPattern("yyyy-MM-dd HH:mm:ss.SSS");
     @Override
     public String convertToDatabaseColumn(DateTime dateTime) {
-        String date = dateTime.toString(df);
-        System.out.println("Date: "+date);
-        return date;
+        return dateTime.toString(df);
     }
 
     @Override

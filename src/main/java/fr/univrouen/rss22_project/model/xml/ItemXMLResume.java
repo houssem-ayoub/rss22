@@ -1,4 +1,4 @@
-package fr.univrouen.rss22_project.model.xml.resume;
+package fr.univrouen.rss22_project.model.xml;
 
 import fr.univrouen.rss22_project.model.adapter.XMLDateTimeAdapter;
 import org.joda.time.DateTime;

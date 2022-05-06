@@ -3,7 +3,7 @@ package fr.univrouen.rss22_project.model.adapter;
 import fr.univrouen.rss22_project.model.orm.FeedORM;
 import fr.univrouen.rss22_project.model.orm.ItemORM;
 import fr.univrouen.rss22_project.model.xml.ItemXML;
-import fr.univrouen.rss22_project.model.xml.resume.ItemXMLResume;
+import fr.univrouen.rss22_project.model.xml.ItemXMLResume;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 

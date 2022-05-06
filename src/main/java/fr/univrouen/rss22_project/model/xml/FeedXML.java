@@ -7,6 +7,7 @@ import org.joda.time.DateTime;
 import javax.xml.bind.annotation.*;
 import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 import java.util.HashSet;
+import java.util.LinkedHashSet;
 import java.util.Set;
 
 @XmlAccessorType(XmlAccessType.NONE)
@@ -27,7 +28,7 @@ public class FeedXML {
     private final Set<ItemXML> items;
     public FeedXML(){
         links = new HashSet<>();
-        items = new HashSet<>(10);
+        items = new LinkedHashSet<>(10);
     }
 
     public String getTitle(){

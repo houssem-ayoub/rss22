@@ -16,14 +16,14 @@
     <xs:simpleType name="textType128">
         <xs:restriction base="xs:string">
             <xs:maxLength value="128"/>
-            <xs:pattern value="[a-zA-Z0-9\s\t/+]+"/>
+            <xs:pattern value="[a-zA-Z\d\s\t/+]+"/>
         </xs:restriction>
     </xs:simpleType>
     <!--  type text64  -->
     <xs:simpleType name="textType64">
         <xs:restriction base="xs:string">
             <xs:maxLength value="64"/>
-            <xs:pattern value="[a-zA-Z0-9\s\t/+]+"/>
+            <xs:pattern value="[a-zA-Z\d\s\t/+]+"/>
         </xs:restriction>
     </xs:simpleType>
     <!--  type mail  -->
@@ -52,7 +52,7 @@
     </xs:complexType>
     <xs:complexType name="itemType">
         <xs:sequence>
-            <xs:element name="guid" type="UUIDType"/>
+            <xs:element name="guid" type="UUIDType" minOccurs="0"/>
             <xs:element name="title" type="textType128" />
             <xs:element name="category" type="categoryType" maxOccurs="unbounded"/>
             <xs:choice>

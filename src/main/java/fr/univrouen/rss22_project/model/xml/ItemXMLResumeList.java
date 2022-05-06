@@ -1,4 +1,4 @@
-package fr.univrouen.rss22_project.model.xml.resume;
+package fr.univrouen.rss22_project.model.xml;
 
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
