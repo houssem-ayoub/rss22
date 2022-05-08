@@ -1,0 +1,32 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+*{
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+h1,h2{
+    text-align: center;
+}
+nav{
+    display: flex;
+}
+.logo{
+    width: 100px;
+    margin: 10px;
+}
+nav a {
+    display: inline-block;
+    font-size: 20px;
+    line-height: 20px;
+    padding: 10px;
+    margin: 20px 10px;
+    text-decoration: none;
+}
+a:hover{
+    color: aqua;
+}
+main{
+    padding: 10px;
+}

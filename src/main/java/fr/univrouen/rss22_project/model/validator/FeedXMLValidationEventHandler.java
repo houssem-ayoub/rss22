@@ -2,7 +2,6 @@ package fr.univrouen.rss22_project.model.validator;
 
 import javax.xml.bind.ValidationEvent;
 import javax.xml.bind.ValidationEventHandler;
-import javax.xml.bind.ValidationEventLocator;
 import java.util.ArrayList;
 import java.util.List;
 

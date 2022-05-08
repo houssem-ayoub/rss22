@@ -1,10 +1,12 @@
 package fr.univrouen.rss22_project.controller;
 
+import fr.univrouen.rss22_project.exception.HTMLNotFoundException;
 import fr.univrouen.rss22_project.model.adapter.ItemAdapter;
 import fr.univrouen.rss22_project.model.service.ItemService;
 import fr.univrouen.rss22_project.model.transformer.XMLObjectTransformer;
 import fr.univrouen.rss22_project.model.xml.ItemXML;
 import fr.univrouen.rss22_project.model.xml.ItemXMLResumeList;
+import fr.univrouen.rss22_project.model.xml.ResponseXML;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.MediaType;
@@ -43,12 +45,12 @@ public class HTMLController {
     }
     @GetMapping(value = "/rss22/html/{guid}",produces = MediaType.TEXT_HTML_VALUE)
     @ResponseBody
-    public String getDetails(@PathVariable("guid") String guid){
+    public String getDetails(@PathVariable("guid") String guid) throws HTMLNotFoundException {
         try {
             return itemXMLTransformer.toHTMLString(ItemXML.class,"item",itemAdapter.adaptToXML(itemService.findItem(guid)));
         }
         catch (EntityNotFoundException ignored){
-            return "<p>Artile avec le guid: "+guid+"n'existe pas</p>";
+            throw new HTMLNotFoundException(new ResponseXML(guid,"ERROR",""));
         }
 
     }

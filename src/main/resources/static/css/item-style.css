@@ -1,0 +1,26 @@
+@import url("/css/style.css");
+
+.categories i{
+    display: inline-block;
+    height: 20px;
+    line-height: 14px;
+    font-size: 14px;
+    color: darkcyan;
+}
+.categories i:not(:first-child):before{
+    content: "";
+    display: inline-block;
+    position: relative;
+    top: 6px;
+    height: 20px;
+    margin: 3px 3px 0px 3px;
+    border: solid 1px black;
+}
+.center-content{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+img{
+    margin-bottom: 10px;
+}

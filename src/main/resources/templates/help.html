@@ -3,8 +3,137 @@
 <head>
     <meta charset="UTF-8">
     <title>Help - RSS22</title>
+    <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
-<p>help</p>
+<nav>
+    <div class="logo">
+        <img class="logo" src="/img/univ-logo.png" alt="logo Université de Rouen Normandie">
+    </div>
+    <a href="/">Accueil</a>
+    <a href="/rss22/resume/html">Liste des articles</a>
+</nav>
+<main>
+    <table border="1">
+        <thead>
+        <tr>
+            <th colspan="3">Liste des requ&#234;tes:</th>
+        </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th>
+                    URI
+                </th>
+                <th>
+                    Methode
+                </th>
+                <th>
+                    R&eacute;sum&eacute; de l’Op&eacute;ration
+                </th>
+            </tr>
+        <tr>
+            <td>/</td>
+            <td>GET</td>
+            <td>Affiche la page d’accueil sous format HTML</td>
+        </tr>
+        <tr>
+            <td>/help</td>
+            <td>GET</td>
+            <td>Affiche la page contenant les informations d’aide</td>
+        </tr>
+        <tr>
+            <td>/rss22/resume/xml</td>
+            <td>GET</td>
+            <td>
+                Affiche la liste des articles stockés sous format XML<br>
+                Retour:<br>
+                &lt;items&gt;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&lt;item&gt;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;guid&gt;{guid}&lt;/guid&gt;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;title&gt;{title}&lt;/title&gt;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;date&gt;{date}&lt;/date&gt;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&lt;/item&gt;<br>
+                ...<br>
+                &lt;/items&gt;<br>
+            </td>
+        </tr>
+        <tr>
+            <td>/rss22/resume/html</td>
+            <td>GET</td>
+            <td>Affiche la liste des articles stockés sous format HTML</td>
+        </tr>
+        <tr>
+            <td>/rss22/xml/{guid}</td>
+            <td>GET</td>
+            <td>Affiche le contenu complet de l’article dont l’identifiant est {guid} sous Format XML</td>
+        </tr>
+        <tr>
+            <td>/rss22/html/{guid}</td>
+            <td>GET</td>
+            <td>Affiche le contenu complet de l’article dont l’identifiant est {guid} sous Format HTML</td>
+        </tr>
+        <tr>
+            <td>rss22/insert</td>
+            <td>POST</td>
+            <td>
+                stocker Les articles du flux dans la base de données.<br>
+                Transmis: un flux XML qui resp&egrave;cte le sch&eacute;ma rss22.xsd<br>
+                Retour:<br>
+                Un flux xml sous la forme :<br>
+                &lt;respone&gt;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&lt;guid&gt;{guid}&lt;/guid&gt;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&lt;status&gt;INSERTED&lt;/status&gt;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&lt;description&gt;{message}&lt;/description&gt;<br>
+                &lt;/respone&gt;<br>
+                En cas d’échec de l’opération,<br>
+                &lt;respone&gt;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&lt;status&gt;ERROR&lt;/status&gt;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&lt;description&gt;{message}&lt;/description&gt;<br>
+                &lt;/respone&gt;
+            </td>
+        </tr>
+        <tr>
+            <td>/rss22/delete/{guid}</td>
+            <td>DELETE</td>
+            <td>
+                Suppression de l’article dont l’identifiant est {guid}.<br>
+                tout flux rss22 vide sera supprimé.
+                Retour:<br>
+                Un flux xml sous la forme :<br>
+                &lt;respone&gt;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&lt;guid&gt;{guid}&lt;/guid&gt;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&lt;status&gt;DELETED&lt;/status&gt;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&lt;description&gt;{message}&lt;/description&gt;<br>
+                &lt;/respone&gt;<br>
+                En cas d’échec de l’opération,<br>
+                &lt;respone&gt;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&lt;status&gt;ERROR&lt;/status&gt;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&lt;description&gt;{message}&lt;/description&gt;<br>
+                &lt;/respone&gt;
+            </td>
+        </tr>
+        <tr>
+            <td>/rss22/search?...</td>
+            <td>GET</td>
+            <td>
+                Rechercher la liste des articles répondant aux contraintes exprimées dans la requête
+                ◦ date [YYYY] Liste des articles dont la date est identique, ou postérieure à celle indiquée dans la
+                requ&ecaron;te.
+                ◦ titreListe [mot1;...] des articles dont le titre comprend l'un des mots de la requête.<br>
+                Retour:<br>
+                &lt;items&gt;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&lt;item&gt;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;guid&gt;{guid}&lt;/guid&gt;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;title&gt;{title}&lt;/title&gt;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;date&gt;{date}&lt;/date&gt;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&lt;/item&gt;<br>
+                ...<br>
+                &lt;/items&gt;<br>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</main>
 </body>
 </html>

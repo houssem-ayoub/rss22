@@ -1,0 +1,16 @@
+@import url("/css/style.css");
+main{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+tbody a {
+    display: inline-block;
+    height: 90px;
+    line-height: 90px;
+    text-decoration: none;
+    text-align: center;
+}
+tr td:first-child{
+    text-align: center;
+}

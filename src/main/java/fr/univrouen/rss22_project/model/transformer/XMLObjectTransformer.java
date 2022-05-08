@@ -24,7 +24,7 @@ public class XMLObjectTransformer {
        catch (JAXBException e){
             e.printStackTrace();
        }
-       return "";
+       return null;
     }
     public String toHTMLString(Class clazz, String xsltFileName, Object XMLData){
         StringWriter sw = new StringWriter();

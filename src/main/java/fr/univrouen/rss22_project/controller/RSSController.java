@@ -1,19 +1,20 @@
 package fr.univrouen.rss22_project.controller;
 
+import fr.univrouen.rss22_project.exception.XMLErrorException;
 import fr.univrouen.rss22_project.exception.XMLNotFoundException;
 import fr.univrouen.rss22_project.model.adapter.ItemAdapter;
 import fr.univrouen.rss22_project.model.orm.ItemORM;
 import fr.univrouen.rss22_project.model.service.FeedService;
 import fr.univrouen.rss22_project.model.service.ItemService;
-import fr.univrouen.rss22_project.model.xml.FeedXML;
-import fr.univrouen.rss22_project.model.xml.ItemXML;
-import fr.univrouen.rss22_project.model.xml.ItemXMLResumeList;
 import fr.univrouen.rss22_project.model.validator.FeedXMLValidator;
+import fr.univrouen.rss22_project.model.xml.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
 
 import javax.persistence.EntityNotFoundException;
+import java.util.List;
+import java.util.Optional;
 
 @RestController
 public class RSSController {
@@ -26,46 +27,52 @@ public class RSSController {
     public ItemXMLResumeList getItemResumeList(){
        return new ItemXMLResumeList(itemAdapter.adaptAllToResumeXML(itemService.list()));
     }
-    @GetMapping(value = "/rss22/resume/xml/{guid}",produces = MediaType.APPLICATION_XML_VALUE)
+    @GetMapping(value = "/rss22/search",produces = MediaType.APPLICATION_XML_VALUE)
+    public ItemXMLResumeList getSearchedItemList(@RequestParam(name = "date",defaultValue = "") String year,@RequestParam(name = "titreListe",defaultValue = "") String titleListParam) throws XMLErrorException{
+      System.out.println("Year:"+year);
+      System.out.println("titleListParam:"+titleListParam);
+       if (year.isBlank()&&titleListParam.isBlank()){
+           return new ItemXMLResumeList(itemAdapter.adaptAllToResumeXML(itemService.list()));
+       }
+       if (year.length()>4 || (!year.matches("\\d{4}") && !year.isBlank())){
+           throw new XMLErrorException(new ResponseXML(null,"Error","la date doit être sous la forme [yyyy]"));
+       }
+       if(titleListParam.isBlank()){
+           return new ItemXMLResumeList(itemAdapter.adaptAllToResumeXML(itemService.findAllByYear(year)));
+       }
+       if (year.isBlank()){
+           return new ItemXMLResumeList(itemAdapter.adaptAllToResumeXML(itemService.findAllByWordList(titleListParam)));
+       }
+        return new ItemXMLResumeList(itemAdapter.adaptAllToResumeXML(itemService.findAllByWordListAndYear(titleListParam,year)));
+    }
+    @GetMapping(value = "/rss22/xml/{guid}",produces = MediaType.APPLICATION_XML_VALUE)
     public ItemXML getItemDetails(@PathVariable("guid") String guid) throws XMLNotFoundException {
        try {
            return itemAdapter.adaptToXML(itemService.findItem(guid));
        }
        catch (EntityNotFoundException ignored){
-           throw new XMLNotFoundException(guid);
+           throw new XMLNotFoundException(new ResponseXML(guid,"ERROR","l'article demandé n'existe pas"));
        }
     }
     @PostMapping(value = "rss22/insert",produces = MediaType.APPLICATION_XML_VALUE)
-    public String insertFeed(@RequestBody FeedXML data){
-       if(feedXmlValidator.validate(data).isEmpty() && !feedService.exists(data)){
-           feedService.save(data);
-           return "<result>" +
-                   "<status>INSERTED</status>" +
-                   "<message>Le flux a été ajouté avec succès</message>"+
-                   "</result>";
+    public ResponseXML insertFeed(@RequestBody FeedXML data) throws XMLErrorException {
+        Optional<String> errorValidationOptional= feedXmlValidator.validate(data);
+        if (errorValidationOptional.isPresent())
+            throw new XMLErrorException(new ResponseXML(null,"Error",errorValidationOptional.get()));
+        if (feedService.exists(data))
+            throw new XMLErrorException(new ResponseXML(null,"Error","Le flux existe déjà"));
+           String guid = feedService.save(data);
+           return  new ResponseXML(guid,"INSERTED","Le flux a été ajouté avec succès");
        }
-       return "<result>" +
-                "<status>ERROR</status>" +
-                "<message>Une erreur et survenu</message>"+
-                "</result>";
-    }
     @DeleteMapping(value = "/rss22/delete/{guid}",produces = MediaType.APPLICATION_XML_VALUE)
-    public String deleteItem(@PathVariable("guid") String guid){
+    public ResponseXML deleteItem(@PathVariable("guid") String guid) throws XMLNotFoundException{
        try {
            ItemORM itemORM = itemService.findItem(guid);
            itemService.delete(itemORM);
-           return "<result>" +
-                   "<id>"+itemORM.getGuid()+"</id>" +
-                   "<status>DELETED</status>" +
-                   "<message>L'article a été supprimé avec succès</message>"+
-                   "</result>";
+           return new ResponseXML(guid,"DELETED","L'article a été supprimé avec succès");
        }
        catch (EntityNotFoundException e){
-           return "<result>" +
-                   "<id>"+guid+"</id>" +
-                   "<status>ERROR</status>" +
-                   "<message>L'article n'existe pas</message>"+
-                   "</result>";
+           throw new XMLNotFoundException(new ResponseXML(guid,"ERROR","l'article demandé n'existe pas"));
        }
     }
 }

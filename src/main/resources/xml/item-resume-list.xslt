@@ -14,7 +14,7 @@
                 <xsl:element name="link">
                     <xsl:attribute name="rel">stylesheet</xsl:attribute>
                     <xsl:attribute name="type">text/css</xsl:attribute>
-                    <xsl:attribute name="href">style.css</xsl:attribute>
+                    <xsl:attribute name="href">/css/list-item-style.css</xsl:attribute>
                 </xsl:element>
             </xsl:element>
             <xsl:call-template name="body"/>
@@ -22,44 +22,64 @@
     </xsl:template>
     <xsl:template name="body">
         <xsl:element name="body">
-            <xsl:element name="h1">
-                <xsl:text>List des articles</xsl:text>
+            <xsl:element name="nav">
+                <xsl:element name="div">
+                    <xsl:attribute name="class">logo</xsl:attribute>
+                    <xsl:element name="img">
+                        <xsl:attribute name="class">logo</xsl:attribute>
+                        <xsl:attribute name="src">/img/univ-logo.png</xsl:attribute>
+                        <xsl:attribute name="alt">logo Université de Rouen Normandie</xsl:attribute>
+                    </xsl:element>
+                </xsl:element>
+                <xsl:element name="a">
+                    <xsl:attribute name="href">/</xsl:attribute>
+                    <xsl:text>Accueil</xsl:text>
+                </xsl:element>
+                <xsl:element name="a">
+                    <xsl:attribute name="href">/help</xsl:attribute>
+                    <xsl:text>Aide</xsl:text>
+                </xsl:element>
             </xsl:element>
-            <xsl:choose>
-                <xsl:when test="rss:item">
-                    <xsl:element name="table">
-                        <xsl:element name="thead">
-                            <xsl:element name="tr">
-                                <xsl:element name="th">
-                                    <xsl:text>Sommaire</xsl:text>
+            <xsl:element name="main">
+                <xsl:element name="h1">
+                    <xsl:text>List des articles</xsl:text>
+                </xsl:element>
+                <xsl:choose>
+                    <xsl:when test="rss:item">
+                        <xsl:element name="table">
+                            <xsl:element name="thead">
+                                <xsl:element name="tr">
+                                    <xsl:element name="th">
+                                        <xsl:text>Sommaire:</xsl:text>
+                                    </xsl:element>
                                 </xsl:element>
                             </xsl:element>
-                        </xsl:element>
-                        <xsl:element name="tbody">
-                            <xsl:element name="tr">
-                                <xsl:element name="th">
-                                    <xsl:text>n°</xsl:text>
+                            <xsl:element name="tbody">
+                                <xsl:element name="tr">
+                                    <xsl:element name="th">
+                                        <xsl:text>n°</xsl:text>
+                                    </xsl:element>
+                                    <xsl:element name="th">
+                                        <xsl:text>GUID</xsl:text>
+                                    </xsl:element>
+                                    <xsl:element name="th">
+                                        <xsl:text>TITRE</xsl:text>
+                                    </xsl:element>
+                                    <xsl:element name="th">
+                                        <xsl:text>DATE</xsl:text>
+                                    </xsl:element>
                                 </xsl:element>
-                                <xsl:element name="th">
-                                    <xsl:text>GUID</xsl:text>
-                                </xsl:element>
-                                <xsl:element name="th">
-                                    <xsl:text>TITRE</xsl:text>
-                                </xsl:element>
-                                <xsl:element name="th">
-                                    <xsl:text>DATE</xsl:text>
-                                </xsl:element>
+                                <xsl:apply-templates select="rss:item"/>
                             </xsl:element>
-                            <xsl:apply-templates select="rss:item"/>
                         </xsl:element>
-                    </xsl:element>
-                </xsl:when>
-                <xsl:otherwise>
-                    <xsl:element name="p">
-                        <xsl:text>Aucun article trouvé</xsl:text>
-                    </xsl:element>
-                </xsl:otherwise>
-            </xsl:choose>
+                    </xsl:when>
+                    <xsl:otherwise>
+                        <xsl:element name="p">
+                            <xsl:text>Aucun article trouvé</xsl:text>
+                        </xsl:element>
+                    </xsl:otherwise>
+                </xsl:choose>
+            </xsl:element>
         </xsl:element>
     </xsl:template>
     <xsl:template match="rss:item">
@@ -80,7 +100,7 @@
                 </xsl:element>
             </xsl:element>
             <xsl:element name="td">
-                <xsl:text>publié le </xsl:text><xsl:value-of select="concat(
+                <xsl:value-of select="concat(
                         substring(rss:date,9,2),'-',
                         substring(rss:date,6,2),'-',
                         substring(rss:date,1,4),' ',

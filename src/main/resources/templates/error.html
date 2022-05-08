@@ -5,6 +5,8 @@
     <title>Not Found - RSS22</title>
 </head>
 <body xmlns:th="http://www.thymeleaf.org">
-    <p th:text="${message}"/>
+    <h1>La page demand&eacute; n'existe page</h1>
+    <p th:if="${guid}" th:text="'GUID: '+${guid}"/>
+    <p>Status: ERROR</p>
 </body>
 </html>
