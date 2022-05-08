@@ -2,10 +2,25 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <title>RSS 22</title>
+    <title>Accueil - RSS22</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body xmlns:th="http://www.thymeleaf.org">
-<p th:text="'version: '+${version}"/>
-<p>Test</p>
+<nav>
+    <div class="logo">
+        <img class="logo" src="/img/univ-logo.png" alt="logo Université de Rouen Normandie">
+    </div>
+    <a href="/rss22/resume/html">Liste des articles</a>
+    <a href="/help">Aide</a>
+</nav>
+<main>
+    <h1>Projet RSS22</h1>
+    <h2 th:text="'version: '+${version}"/>
+    <p>D&eacute;v&eacute;loppeurs:</p>
+    <ul>
+        <li>AYOUB Houssem</li>
+        <li>HADDAM Younes</li>
+    </ul>
+</main>
 </body>
 </html>

@@ -2,6 +2,7 @@ package fr.univrouen.rss22_project.model.service;
 
 import fr.univrouen.rss22_project.model.adapter.FeedAdapter;
 import fr.univrouen.rss22_project.model.orm.FeedORM;
+import fr.univrouen.rss22_project.model.orm.ItemORM;
 import fr.univrouen.rss22_project.model.repository.FeedRepository;
 import fr.univrouen.rss22_project.model.repository.ItemRepository;
 import fr.univrouen.rss22_project.model.xml.FeedXML;
@@ -22,7 +23,10 @@ public class FeedService {
         return feedORM != null;
     }
 
-    public void save(FeedXML feedXML) {
-        itemRepository.saveAll(feedAdapter.getORMItems(feedXML));
+    public String save(FeedXML feedXML) {
+
+        return itemRepository.saveAll(feedAdapter.getORMItems(feedXML)).stream().reduce((first,second)->second).map(
+                ItemORM::getGuid
+        ).orElse(null);
     }
 }

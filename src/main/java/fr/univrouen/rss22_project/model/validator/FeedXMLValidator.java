@@ -1,6 +1,9 @@
 package fr.univrouen.rss22_project.model.validator;
 
+import fr.univrouen.rss22_project.exception.XMLErrorException;
 import fr.univrouen.rss22_project.model.xml.FeedXML;
+import fr.univrouen.rss22_project.model.xml.ResponseXML;
+import net.bytebuddy.dynamic.DynamicType;
 import org.xml.sax.SAXException;
 
 import javax.xml.XMLConstants;
@@ -13,6 +16,8 @@ import javax.xml.validation.Schema;
 import javax.xml.validation.SchemaFactory;
 import java.io.StringWriter;
 import java.util.List;
+import java.util.Optional;
+import java.util.stream.Stream;
 
 public class FeedXMLValidator {
     private Schema schema;
@@ -26,7 +31,7 @@ public class FeedXMLValidator {
             e.printStackTrace();
         }
     }
-    public List<String> validate(FeedXML feedXML){
+    public Optional<String> validate(FeedXML feedXML) throws XMLErrorException {
         try {
             FeedXMLValidationEventHandler feedXMLValidationEventHandler = new FeedXMLValidationEventHandler();
             JAXBContext context = JAXBContext.newInstance(FeedXML.class);
@@ -35,12 +40,13 @@ public class FeedXMLValidator {
             marshaller.setSchema(schema);
             marshaller.setEventHandler(feedXMLValidationEventHandler);
             marshaller.marshal(feedXML,new StringWriter());
-            return feedXMLValidationEventHandler.getErrors();
+            return feedXMLValidationEventHandler.getErrors().stream().findFirst();
+
 
         }
         catch (JAXBException e){
             e.printStackTrace();
-            return null;
+            return Optional.of("un erreur est survenu dans le serveur");
         }
 
     }
