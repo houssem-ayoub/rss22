@@ -29,13 +29,13 @@
     <!--  type mail  -->
     <xs:simpleType name="mailType">
         <xs:restriction base="xs:string">
-            <xs:pattern value="[a-zA-Z]+[0-9.,:;~\-]*[a-zA-Z]*@[a-zA-Z]+[0-9.,:;~\-]*[a-zA-Z]*.[a-zA-z]{2,3}"/>
+            <xs:pattern value="[a-zA-Z]+[\d.,:;~\-]*[a-zA-Z]*@[a-zA-Z]+[\d.,:;~\-]*[a-zA-Z]*\.[a-zA-z]{2,3}"/>
         </xs:restriction>
     </xs:simpleType>
     <!--  type date  -->
     <xs:simpleType name="dateType">
         <xs:restriction base="xs:string">
-            <xs:pattern value="\d{4}-\d{2}-\d{2}\s?[Tt]?[0-2][0-9]:[0-5][0-9]:[0-5][0-9].[0-9][0-9][0-9][Zz]?"/>
+            <xs:pattern value="\d{4}-\d{2}-\d{2}(\s|[Tt])[0-2]\d:[0-5]\d:[0-5]\d.\d\d\d[Zz]?"/>
         </xs:restriction>
     </xs:simpleType>
     <xs:complexType name="linkType">

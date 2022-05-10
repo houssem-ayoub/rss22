@@ -16,12 +16,4 @@ public interface ItemRepository  extends JpaRepository<ItemORM, String> , JpaSpe
 
     @Query(value = "SELECT i FROM items i WHERE i.feed= :feed")
     List<ItemORM> findAllByFeed(@Param("feed") FeedORM feedORM);
-
-    @Query(value = "SELECT i FROM items i WHERE LOWER(i.title) like :wordList")
-    List<ItemORM> findAllByWordList(@Param("wordList") List<String>  wordList);
-    @Query(value = "SELECT i FROM items i WHERE i.date >= :year")
-    List<ItemORM> findAllByYear(@Param("year") DateTime date);
-
-    @Query(value = "SELECT i FROM items i WHERE LOWER(i.title) like :wordList AND i.date >= :year")
-    List<ItemORM> findAllByWordListAndYear(@Param("wordList") List<String> wordList, @Param("year") DateTime date);
 }

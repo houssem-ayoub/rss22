@@ -29,8 +29,6 @@ public class RSSController {
     }
     @GetMapping(value = "/rss22/search",produces = MediaType.APPLICATION_XML_VALUE)
     public ItemXMLResumeList getSearchedItemList(@RequestParam(name = "date",defaultValue = "") String year,@RequestParam(name = "titreListe",defaultValue = "") String titleListParam) throws XMLErrorException{
-      System.out.println("Year:"+year);
-      System.out.println("titleListParam:"+titleListParam);
        if (year.isBlank()&&titleListParam.isBlank()){
            return new ItemXMLResumeList(itemAdapter.adaptAllToResumeXML(itemService.list()));
        }

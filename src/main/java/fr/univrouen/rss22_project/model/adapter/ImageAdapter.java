@@ -7,6 +7,8 @@ import org.springframework.stereotype.Component;
 @Component
 public class ImageAdapter {
     public ImageORM adaptToORM(ImageXML imageXML){
+        if (imageXML == null)
+            return null;
         return new ImageORM(
                 imageXML.getType(),
                 imageXML.getHref(),
@@ -15,6 +17,8 @@ public class ImageAdapter {
     }
 
     public ImageXML adaptToXml(ImageORM imageORM){
+        if (imageORM == null)
+            return null;
         return new ImageXML(imageORM.getType(),imageORM.getHref(),imageORM.getAlt(),imageORM.getLength());
     }
 }

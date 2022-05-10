@@ -1,0 +1,322 @@
+<rss:feed lang="fr" xmlns:rss="http://univrouen.fr/rss22">
+  <rss:title>Flux rss22 maximal</rss:title>
+  <rss:pubDate>2022-03-11T22:15:05.100</rss:pubDate>
+  <rss:copyright>univ Rouen</rss:copyright>
+  <!--1 or more repetitions:-->
+  <rss:link rel="alternate" type="text/html" href="https://www.lemonde.fr/"/>
+  <rss:link rel="self" type="text/html" href="https://rss22-ayoub-haddam.cleverapps.io"/>
+  <!--1 to 10 repetitions:-->
+  <rss:item>
+    <rss:title>Au Parti socialiste</rss:title>
+    <!--1 or more repetitions:-->
+    <rss:category term="politique"/>
+    <rss:category term="actualite"/>
+    <rss:category term="election"/>
+    <!--You have a CHOICE of the next 2 items at this level-->
+    <rss:updated>2022-02-25T18:49:00.000Z</rss:updated>
+    <!--Optional:-->
+    <rss:image type="JPG" href="https://img.lemde.fr/2022/05/04/0/0/6608/4592/664/0/75/0/4cb69a6_5096302-01-06.jpg" alt="Pierre Jouvet porte parole du PS" length="4592"/>
+    <rss:content type="src" href="https://www.lemonde.fr/politique/article/2022/05/10/le-parti-socialiste-au-cimetiere-des-elephants_6125407_823448.html"/>
+    <!--You have a CHOICE of the next 2 items at this level-->
+    <rss:author>
+      <rss:name>Laurent Telo</rss:name>
+      <!--Optional:-->
+      <rss:email>laurent.telo@mail.fr</rss:email>
+      <!--Optional:-->
+      <rss:uri rel="alternate" type="text/html" href="https://www.lemonde.fr/signataires/laurent-telo"/>
+    </rss:author>
+    <rss:contributor>
+      <rss:name>Pierre Jouvet</rss:name>
+      <!--Optional:-->
+      <rss:email>Pierre.Jouvet@gmail.fr</rss:email>
+      <!--Optional:-->
+      <rss:uri rel="alternate" type="text/html" href="https://www.wikiwand.com/fr/Pierre_Jouvet"/>
+    </rss:contributor>
+  </rss:item>
+  <rss:item>
+    <!--Optional:-->
+    <rss:title>les Etats Unis veulent encore augmenter leur aide financiere a l Ukraine</rss:title>
+    <!--1 or more repetitions:-->
+    <rss:category term="politique"/>
+    <rss:category term="actualite"/>
+    <rss:category term="defensive"/>
+    <rss:category term="guerre"/>
+    <rss:category term="ukraine"/>
+    <!--You have a CHOICE of the next 2 items at this level-->
+    <rss:published>2022-03-12T04:03:15.010Z</rss:published>
+    <!--Optional:-->
+    <rss:image type="JPG" href="https://img.lemde.fr/2022/05/08/0/0/5076/3384/580/0/75/0/287ffab_9a16458e2bba4dea8538387dcd576f5e-16f92925da094a9c9bcd539fcbcb8a64-0.jpg" alt="La premiere dame des Etats Unis" length="3"/>
+    <rss:content type="text">
+      Faire la guerre par parrainage, sans perdre de soldats, n’est pas dénué de risques. L’engagement des Etats-Unis derrière l’Ukraine est désormais bien établi. Le déplacement surprise dans ce pays, dimanche 8 mai, de Jill Biden l’a illustré de façon symbolique. L’épouse du président américain a rencontré celle de Volodymyr Zelensky, Olena Zelenska, dans la ville d’Oujhorod, près de la frontière slovaque. Mais, derrière les gestes politiques et les annonces régulières de nouvelles livraisons d’équipements militaires par Washington, il existe aussi une guerre invisible. Le grand public ne connaît pas l’ampleur du partage de renseignements avec l’Ukraine. Depuis plusieurs mois, grâce à ses capacités technologiques, le Pentagone a contribué à protéger les forces ukrainiennes des tirs adverses et les a aidées à mieux cibler les positions russes.
+    </rss:content>
+    <!--You have a CHOICE of the next 2 items at this level-->
+    <rss:author>
+      <rss:name>Piotr Smolar</rss:name>
+      <!--Optional:-->
+      <rss:email>spiotr.smolar@mail.fr</rss:email>
+      <!--Optional:-->
+      <rss:uri rel="alternate" type="text/html" href="https://www.lemonde.fr/signataires/piotr-smolar/"/>
+    </rss:author>
+    <rss:contributor>
+      <rss:name>SUSAN WALSH</rss:name>
+      <!--Optional:-->
+      <rss:email>susan.walsh@mail.fr</rss:email>
+      <!--Optional:-->
+      <rss:uri rel="self" type="text/html" href="https://rss22-ayoub-haddam.cleverapps.io/rss22/html/0a5a22ee-aab8-4880-a197-bbf62e7aa807"/>
+    </rss:contributor>
+  </rss:item>
+  <rss:item>
+    <rss:title>L acteur Caleb Landry Jones dans l intimite d un tueur</rss:title>
+    <!--1 or more repetitions:-->
+    <rss:category term="culture"/>
+    <rss:category term="Nitram"/>
+    <rss:category term="crime"/>
+    <rss:category term="cannes"/>
+    <!--You have a CHOICE of the next 2 items at this level-->
+    <rss:published>2012-05-01T22:15:02.552Z</rss:published>
+    <!--Optional:-->
+    <rss:image type="PNG" href="https://img.lemde.fr/2022/05/05/525/138/2815/3609/630/0/75/0/83d8654_1651735960179-web-555-554-ouv-bis-001-220504-165108.jpg" alt="L acteur Caleb Landry Jones au Festival de Cannes" length="3"/>
+    <rss:content type="src" href="https://www.lemonde.fr/m-le-mag/article/2022/05/10/l-acteur-caleb-landry-jones-dans-l-intimite-d-un-tueur_6125403_4500055.html"/>
+    <!--You have a CHOICE of the next 2 items at this level-->
+    <rss:author>
+      <rss:name>Clementine Goldszal</rss:name>
+      <!--Optional:-->
+      <rss:email>clementine.goldszal@mail.fr</rss:email>
+      <!--Optional:-->
+      <rss:uri rel="alternate" type="text/html" href="https://www.lemonde.fr/signataires/clementine-goldszal"/>
+    </rss:author>
+    <rss:contributor>
+      <rss:name>Piotr Smolar</rss:name>
+      <!--Optional:-->
+      <rss:email>spiotr.smolar@mail.fr</rss:email>
+      <!--Optional:-->
+      <rss:uri rel="alternate" type="text/html" href="https://www.lemonde.fr/signataires/piotr-smolar/"/>
+    </rss:contributor>
+  </rss:item>
+  <rss:item>
+    <rss:title>maitresse des mers la Chine montre ses muscles</rss:title>
+    <!--1 or more repetitions:-->
+    <rss:category term="culture"/>
+    <rss:category term="chine"/>
+    <rss:category term="asie"/>
+    <rss:category term="documentaire"/>
+    <rss:category term="arte"/>
+    <!--You have a CHOICE of the next 2 items at this level-->
+    <rss:updated>2000-01-29T15:26:19.200</rss:updated>
+    <!--Optional:-->
+    <rss:image type="PNG" href="https://img.lemde.fr/2022/05/09/0/0/3757/2439/664/0/75/0/99dee35_1652090156128-000-was8974500.jpg" alt="Le documentaire d Anne Loussouarn permet de mesurer la menace militaire exercee par la Chine dans la zone Asie Pacifique" length="3"/>
+    <rss:content type="text">
+      Aussi instructif qu’inquiétant, didactique avec ses cartes animées, riche en archives filmées issues de sources diverses (chinoises, australiennes, américaines, philippines notamment) et en témoignages de diplomates, officiers et agents de sécurité, ce documentaire permet de mieux mesurer la menace militaire exercée par la Chine dans la zone Asie-Pacifique.
+
+      Dès son arrivée au pouvoir à Pékin, en mars 2013, Xi Jinping avait clairement dévoilé ses intentions, à savoir restaurer une grandeur impériale disparue au XIXe siècle après des décennies de territoires perdus et d’humiliations imposées par des puissances étrangères. Cette posture victimaire permet au leader chinois d’imposer à son peuple une stratégie agressive axée sur l’expansion territoriale, finement analysée dans ce documentaire. Et pour devenir la première puissance mondiale du XXIe siècle, la Chine doit se tourner vers la mer.
+    </rss:content>
+    <!--You have a CHOICE of the next 2 items at this level-->
+    <rss:author>
+      <rss:name>Alain Constant</rss:name>
+      <!--Optional:-->
+      <rss:email>alain.constant@mail.fr</rss:email>
+      <!--Optional:-->
+      <rss:uri rel="alternate" type="text/plain" href="https://www.lemonde.fr/signataires/alain-constant/"/>
+    </rss:author>
+    <rss:contributor>
+      <rss:name>Pierre Jouvet</rss:name>
+      <!--Optional:-->
+      <rss:email>Pierre.Jouvet@gmail.fr</rss:email>
+      <!--Optional:-->
+      <rss:uri rel="alternate" type="text/html" href="https://www.wikiwand.com/fr/Pierre_Jouvet"/>
+    </rss:contributor>
+  </rss:item>
+  <rss:item>
+    <rss:title>Les politiques radicales sont necessaires a la lutte contre les inegalites sociales et environnementales</rss:title>
+    <!--1 or more repetitions:-->
+    <rss:category term="politique"/>
+    <rss:category term="debat"/>
+    <rss:category term="sociale"/>
+    <rss:category term="monde"/>
+    <rss:category term="france"/>
+    <!--You have a CHOICE of the next 2 items at this level-->
+    <rss:published>2002-01-15T20:10:30.001</rss:published>
+    <!--Optional:-->
+    <rss:image type="PNG" href="https://picsum.photos/500/300" alt="Dans une tribune" length="3"/>
+    <rss:content type="text">
+      Quelle n’a pas été ma stupeur en découvrant cette effarante tribune de mes amis José Bové et Daniel Cohn-Bendit dans Le Monde, qualifiant la Nouvelle Union populaire écologique et sociale (Nupes) d’« escroquerie », rien de moins ! Ils accusent les écologistes d’avoir vendu leur âme en signant un pacte faustien avec le diable Mélenchon.
+
+      Ces vieux routiers de la politique, qui se disent si attachés à la qualité du débat public, devraient savoir que la caricature portée à son incandescence ne fait que contribuer à attiser les haines sur lesquelles prospèrent les extrêmes. Selon eux, les écologistes seraient devenus les « complices » de Poutine, assis à la droite du « père Ubu du Kremlin », une bande de vendus qui « sacrifient le principe démocratique » et la liberté, qui « immolent » une « histoire collective » et une « espérance » pour « d’obscures tractations électorales ».
+    </rss:content>
+    <!--You have a CHOICE of the next 2 items at this level-->
+    <rss:author>
+      <rss:name>Alain Constant</rss:name>
+      <!--Optional:-->
+      <rss:email>alain.constant@mail.fr</rss:email>
+      <!--Optional:-->
+      <rss:uri rel="alternate" type="text/plain" href="https://www.lemonde.fr/signataires/alain-constant/"/>
+    </rss:author>
+    <rss:author>
+      <rss:name>Clementine Goldszal</rss:name>
+      <!--Optional:-->
+      <rss:email>clementine.goldszal@mail.fr</rss:email>
+      <!--Optional:-->
+      <rss:uri rel="alternate" type="text/html" href="https://www.lemonde.fr/signataires/clementine-goldszal"/>
+    </rss:author>
+    <rss:contributor>
+      <rss:name>Pierre Jouvet</rss:name>
+      <!--Optional:-->
+      <rss:email>Pierre.Jouvet@gmail.fr</rss:email>
+      <!--Optional:-->
+      <rss:uri rel="alternate" type="text/html" href="https://www.wikiwand.com/fr/Pierre_Jouvet"/>
+    </rss:contributor>
+  </rss:item>
+  <rss:item>
+    <rss:title>Un portrait de Marilyn Monroe par Andy Warhol devient le tableau du XXe siecle le plus cher</rss:title>
+    <!--1 or more repetitions:-->
+    <rss:category term="economie"/>
+    <rss:category term="culture"/>
+    <rss:category term="Marilyn"/>
+    <rss:category term="peinture"/>
+    <!--You have a CHOICE of the next 2 items at this level-->
+    <rss:published>2010-11-02T20:10:22.015Z</rss:published>
+    <!--Optional:-->
+    <rss:image type="JPEG" href="https://img.lemde.fr/2022/05/09/0/0/3960/2640/664/0/75/0/3d773d4_69dffe1f363643a4907f34829be22e70-9d7e199113b044c784c5185265259666-0.jpg" alt="Shot Sage Blue Marilyn" length="3"/>
+    <rss:content type="text">
+      Le marchand d’art de Christie’s Jussi Pylkkänen a senti « une certaine tension dans la salle ». Puis, frappant de son marteau, à 20 h 36, après quatre minutes d’enchères, il a adjugé l’œuvre d’art pour 170 millions de dollars (161 millions d’euros) : le portrait de Marilyn Monroe par Andy Warhol (1928-1987) Shot Sage Blue Marilyn (1964) est ainsi devenu, lundi 9 mai, à New York, l’œuvre du XXe siècle la plus chère jamais vendue aux enchères – le record absolu revient à Salvator Mundi, attribué à Léonard de Vinci et acheté 450 millions de dollars en 2017 par le prince héritier d’Arabie saoudite Mohammed Ben Salman.
+    </rss:content>
+    <!--You have a CHOICE of the next 2 items at this level-->
+    <rss:author>
+      <rss:name>Arnaud Leparmentier</rss:name>
+      <!--Optional:-->
+      <rss:email>arnaud.leparmentier@mail.fr</rss:email>
+      <!--Optional:-->
+      <rss:uri rel="alternate" type="text/html" href="https://www.lemonde.fr/signataires/arnaud-leparmentier/"/>
+    </rss:author>
+    <rss:contributor>
+      <rss:name>Clementine Goldszal</rss:name>
+      <!--Optional:-->
+      <rss:email>clementine.goldszal@mail.fr</rss:email>
+      <!--Optional:-->
+      <rss:uri rel="alternate" type="text/html" href="https://www.lemonde.fr/signataires/clementine-goldszal"/>
+    </rss:contributor>
+  </rss:item>
+  <rss:item>
+    <rss:title>Le Petit Lavisse bible du roman national a l usage des ecoliers</rss:title>
+    <!--1 or more repetitions:-->
+    <rss:category term="bible"/>
+    <rss:category term="roman"/>
+    <rss:category term="national"/>
+    <rss:category term="historique"/>
+    <!--You have a CHOICE of the next 2 items at this level-->
+    <rss:published>2019-08-13T15:10:20.400</rss:published>
+    <!--Optional:-->
+    <rss:image type="PNG" href="https://www.retronews.fr/sites/default/files/styles/rn_large/public/capture_36.png?itok=yD7EyB4t&amp;c=9a12f9540526e8540367e49535e7f3a0" alt="Ernest Lavisse par Dornac" length="3"/>
+    <rss:content type="src" href="https://www.retronews.fr/education/echo-de-presse/2019/08/13/le-petit-lavisse"/>
+    <!--You have a CHOICE of the next 2 items at this level-->
+    <rss:author>
+      <rss:name>Pierre Ancery</rss:name>
+      <!--Optional:-->
+      <rss:email>pierre.ancery@mail.fr</rss:email>
+      <!--Optional:-->
+      <rss:uri rel="alternate" type="text/html" href="https://www.retronews.fr/content/pierre-ancery"/>
+    </rss:author>
+    <rss:contributor>
+      <rss:name>Arnaud Leparmentier</rss:name>
+      <!--Optional:-->
+      <rss:email>arnaud.leparmentier@mail.fr</rss:email>
+      <!--Optional:-->
+      <rss:uri rel="alternate" type="text/html" href="https://www.lemonde.fr/signataires/arnaud-leparmentier/"/>
+    </rss:contributor>
+  </rss:item>
+  <rss:item>
+    <rss:title>Corneille auteur des oeuvres de Moliere  renaissance d une polemique</rss:title>
+    <!--1 or more repetitions:-->
+    <rss:category term="culture"/>
+    <rss:category term="arts"/>
+    <rss:category term="Moliere"/>
+    <rss:category term="corneille"/>
+    <!--You have a CHOICE of the next 2 items at this level-->
+    <rss:published>2021-12-09T10:02:54.910</rss:published>
+    <!--Optional:-->
+    <rss:image type="PNG" href="https://www.retronews.fr/sites/default/files/styles/rn_large/public/capture_253.jpg?itok=mLvUaTDE&amp;c=4dac6d7164dd9b2a52df9186a6f79830" alt="Moliere portrait par Pierre Mignard source WikiCommons" length="3"/>
+    <rss:content type="text" href="https://www.retronews.fr/arts/echo-de-presse/2021/12/09/corneille-auteur-des-oeuvres-de-moliere"/>
+    <!--You have a CHOICE of the next 2 items at this level-->
+    <rss:author>
+      <rss:name>Pierre Ancery</rss:name>
+      <!--Optional:-->
+      <rss:email>pierre.ancery@mail.fr</rss:email>
+      <!--Optional:-->
+      <rss:uri rel="alternate" type="text/html" href="https://www.retronews.fr/content/pierre-ancery"/>
+    </rss:author>
+    <rss:contributor>
+      <rss:name>Arnaud Leparmentier</rss:name>
+      <!--Optional:-->
+      <rss:email>arnaud.leparmentier@mail.fr</rss:email>
+      <!--Optional:-->
+      <rss:uri rel="alternate" type="text/html" href="https://www.lemonde.fr/signataires/arnaud-leparmentier/"/>
+    </rss:contributor>
+  </rss:item>
+  <rss:item>
+    <rss:title>Blaise Diagne et fils destinees noires au temps de la colonisation</rss:title>
+    <!--1 or more repetitions:-->
+    <rss:category term="societe"/>
+    <rss:category term="culture"/>
+    <rss:category term="colonisation"/>
+    <rss:category term="france"/>
+    <!--You have a CHOICE of the next 2 items at this level-->
+    <rss:updated>2022-05-03 22:15:59.060</rss:updated>
+    <!--Optional:-->
+    <rss:image type="PNG" href="https://www.retronews.fr/sites/default/files/styles/extra_large/public/20200331_diagne_une.jpg?itok=TeaumEhO" alt="Blaise Diagne et fils" length="3"/>
+    <rss:content type="text">
+      En  1931, Blaise Diagne devient le tout premier ministre noir en France tandis que son fils Raoul est le premier joueur de couleur à revêtir le maillot de l’équipe de France. Ces deux destinées incarnent les enjeux contradictoires d’un moment, le temps colonial.
+    </rss:content>
+    <!--You have a CHOICE of the next 2 items at this level-->
+    <rss:author>
+      <rss:name>Lucas Alves Murillo</rss:name>
+      <!--Optional:-->
+      <rss:email>lucas.alves@mail.fr</rss:email>
+      <!--Optional:-->
+      <rss:uri rel="alternate" type="text/html" href="https://www.retronews.fr/content/lucas-alves-murillo"/>
+    </rss:author>
+    <rss:contributor>
+      <rss:name>Pierre Ancery</rss:name>
+      <!--Optional:-->
+      <rss:email>pierre.ancery@mail.fr</rss:email>
+      <!--Optional:-->
+      <rss:uri rel="alternate" type="text/html" href="https://www.retronews.fr/content/pierre-ancery"/>
+    </rss:contributor>
+  </rss:item>
+  <rss:item>
+    <rss:title>Le Puy du Fou promotion d une histoire de France figee et caricaturale</rss:title>
+    <!--1 or more repetitions:-->
+    <rss:category term="societe"/>
+    <rss:category term="culture"/>
+    <rss:category term="france"/>
+    <rss:category term="histoire"/>
+    <rss:category term="interview"/>
+    <rss:category term="ouvrage"/>
+    <!--You have a CHOICE of the next 2 items at this level-->
+    <rss:published>2017-05-10 18:20:40.020</rss:published>
+    <!--Optional:-->
+    <rss:image type="BMP" href="https://www.retronews.fr/sites/default/files/styles/rn_large/public/le_char_du_roi_et_._btv1b10303108g.jpeg?itok=lhhaLnbj&amp;c=62f39f49eb132ea87d2ada6bd3e1bd5a" alt="Le char du Roi Louis XIV et de la Reine" length="3"/>
+    <rss:content type="src" href="https://www.retronews.fr/societe/interview/2022/05/10/le-puy-du-fou"/>
+    <!--You have a CHOICE of the next 2 items at this level-->
+    <rss:author>
+      <rss:name>Florian Besson</rss:name>
+      <!--Optional:-->
+      <rss:email>florian.besson@mail.fr</rss:email>
+      <!--Optional:-->
+      <rss:uri rel="alternate" type="text/html" href="https://www.retronews.fr/content/florian-besson"/>
+    </rss:author>
+    <rss:author>
+      <rss:name>Marina Bellot</rss:name>
+      <!--Optional:-->
+      <rss:email>marina.bellot@mail.fr</rss:email>
+      <!--Optional:-->
+      <rss:uri rel="alternate" type="text/html" href="https://www.retronews.fr/contributeur/marina-bellot"/>
+    </rss:author>
+    <rss:contributor>
+      <rss:name>Lucas Alves Murillo</rss:name>
+      <!--Optional:-->
+      <rss:email>lucas.alves@mail.fr</rss:email>
+      <!--Optional:-->
+      <rss:uri rel="alternate" type="text/html" href="https://www.retronews.fr/content/lucas-alves-murillo"/>
+    </rss:contributor>
+  </rss:item>
+</rss:feed>

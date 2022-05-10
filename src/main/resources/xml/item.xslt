@@ -108,7 +108,53 @@
                         </xsl:choose>
                     </xsl:element>
                 </xsl:element>
+                <xsl:if test="rss:author|rss:contributor">
+                    <xsl:element name="ul">
+                        <xsl:apply-templates select="rss:author"/>
+                        <xsl:apply-templates select="rss:contributor"/>
+                    </xsl:element>
+                </xsl:if>
             </xsl:element>
+        </xsl:element>
+    </xsl:template>
+    <xsl:template match="rss:author">
+        <xsl:element name="li">
+            <xsl:value-of select="concat('Auteur: ',rss:name)"/>
+            <xsl:if test="rss:email|rss:uri">
+                <xsl:text>(</xsl:text>
+                <xsl:if test="rss:email">
+                    <xsl:value-of select="concat('email: ',rss:email)"/>
+                    <xsl:if test="rss:uri"><xsl:text>/ </xsl:text></xsl:if>
+                </xsl:if>
+                <xsl:if test="rss:uri">
+                    <xsl:text>uri: </xsl:text>
+                    <xsl:element name="a">
+                        <xsl:attribute name="href"><xsl:value-of select="rss:uri/@href"/></xsl:attribute>
+                        <xsl:value-of select="rss:uri/@href"/>
+                    </xsl:element>
+                </xsl:if>
+                <xsl:text>)</xsl:text>
+            </xsl:if>
+        </xsl:element>
+    </xsl:template>
+    <xsl:template match="rss:contributor">
+        <xsl:element name="li">
+            <xsl:value-of select="concat('Contributeur: ',rss:name)"/>
+            <xsl:if test="rss:email|rss:uri">
+                <xsl:text>(</xsl:text>
+                <xsl:if test="rss:email">
+                    <xsl:value-of select="concat('email: ',rss:email)"/>
+                    <xsl:if test="rss:uri"><xsl:text>/</xsl:text></xsl:if>
+                </xsl:if>
+                <xsl:if test="rss:uri">
+                    <xsl:text>uri: </xsl:text>
+                    <xsl:element name="a">
+                        <xsl:attribute name="href"><xsl:value-of select="rss:uri/@href"/></xsl:attribute>
+                        <xsl:value-of select="rss:uri/@href"/>
+                    </xsl:element>
+                </xsl:if>
+                <xsl:text>)</xsl:text>
+            </xsl:if>
         </xsl:element>
     </xsl:template>
 </xsl:stylesheet>

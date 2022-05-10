@@ -1,0 +1,700 @@
+{
+	"info": {
+		"_postman_id": "e1e10014-e34c-4096-b12f-76d1c7ac080a",
+		"name": "rss22",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "https://rss22-ayoub-haddam.cleverapps.io/rss22/resume/xml",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/xml",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://rss22-ayoub-haddam.cleverapps.io/rss22/resume/xml",
+					"protocol": "https",
+					"host": [
+						"rss22-ayoub-haddam",
+						"cleverapps",
+						"io"
+					],
+					"path": [
+						"rss22",
+						"resume",
+						"xml"
+					]
+				},
+				"description": "récupérer la liste des articles"
+			},
+			"response": [
+				{
+					"name": "https://rss22-ayoub-haddam.cleverapps.io/rss22/resume/xml",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/xml",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://rss22-ayoub-haddam.cleverapps.io/rss22/resume/xml",
+							"protocol": "https",
+							"host": [
+								"rss22-ayoub-haddam",
+								"cleverapps",
+								"io"
+							],
+							"path": [
+								"rss22",
+								"resume",
+								"xml"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "xml",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/xml"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 10 May 2022 17:26:56 GMT"
+						},
+						{
+							"key": "Sozu-Id",
+							"value": "01G2QG4XSZMC88X126HJX9QWH2"
+						}
+					],
+					"cookie": [],
+					"body": "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?>\n<rss:items xmlns:rss=\"http://univrouen.fr/rss22\">\n    <rss:item guid=\"0a5a22ee-aab8-4880-a197-bbf62e7aa807\">\n        <rss:title>Element 01</rss:title>\n        <rss:date>2022-02-22T20:20:10.010Z</rss:date>\n    </rss:item>\n    <rss:item guid=\"f613f52b-1477-4f8e-a17b-0f9a6e14b206\">\n        <rss:title>Element 02 qui depasse les 45 caracteres et qui va etre coupe</rss:title>\n        <rss:date>2022-02-10T20:20:10.010Z</rss:date>\n    </rss:item>\n</rss:items>"
+				}
+			]
+		},
+		{
+			"name": "https://rss22-ayoub-haddam.cleverapps.io/rss22/xml/0a5a22ee-aab8-4880-a197-bbf62e7aa807",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://rss22-ayoub-haddam.cleverapps.io/rss22/xml/0a5a22ee-aab8-4880-a197-bbf62e7aa807",
+					"protocol": "https",
+					"host": [
+						"rss22-ayoub-haddam",
+						"cleverapps",
+						"io"
+					],
+					"path": [
+						"rss22",
+						"xml",
+						"0a5a22ee-aab8-4880-a197-bbf62e7aa807"
+					]
+				},
+				"description": "Détails article"
+			},
+			"response": [
+				{
+					"name": "https://rss22-ayoub-haddam.cleverapps.io/rss22/xml/0a5a22ee-aab8-4880-a197-bbf62e7aa807",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://rss22-ayoub-haddam.cleverapps.io/rss22/xml/0a5a22ee-aab8-4880-a197-bbf62e7aa807",
+							"protocol": "https",
+							"host": [
+								"rss22-ayoub-haddam",
+								"cleverapps",
+								"io"
+							],
+							"path": [
+								"rss22",
+								"xml",
+								"0a5a22ee-aab8-4880-a197-bbf62e7aa807"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "xml",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/xml"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 10 May 2022 17:26:20 GMT"
+						},
+						{
+							"key": "Sozu-Id",
+							"value": "01G2QG3V8GHYHRX6WNG46CQ3Y5"
+						}
+					],
+					"cookie": [],
+					"body": "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?>\n<rss:item xmlns:rss=\"http://univrouen.fr/rss22\" guid=\"0a5a22ee-aab8-4880-a197-bbf62e7aa807\">\n    <rss:title>Element 01</rss:title>\n    <rss:category term=\"cat1\"/>\n    <rss:category term=\"cat2\"/>\n    <rss:published>2022-02-22T20:20:10.010Z</rss:published>\n    <rss:image type=\"PNG\" href=\"https://picsum.photos/500/300\" alt=\"image du flux\" length=\"3\"/>\n    <rss:content type=\"src\" href=\"http://www.corp.gov/sceptra/et\"/>\n    <rss:author>\n        <rss:name>Anthony Kasper</rss:name>\n        <rss:email>t@t.fr</rss:email>\n        <rss:uri rel=\"self\" type=\"text/html\" href=\"http://www.any.org/speluncis/profundum\"/>\n    </rss:author>\n    <rss:author>\n        <rss:name>Sophy Jose</rss:name>\n    </rss:author>\n</rss:item>"
+				}
+			]
+		},
+		{
+			"name": "https://rss22-ayoub-haddam.cleverapps.io/rss22/xml/0a5a22ee-aab8-4880-a197-bbf62e7aa807",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://rss22-ayoub-haddam.cleverapps.io/rss22/xml/0a5a22ee-aab8-4880-a197-bbf62e7aa806",
+					"protocol": "https",
+					"host": [
+						"rss22-ayoub-haddam",
+						"cleverapps",
+						"io"
+					],
+					"path": [
+						"rss22",
+						"xml",
+						"0a5a22ee-aab8-4880-a197-bbf62e7aa806"
+					]
+				},
+				"description": "Détails article avec erreur"
+			},
+			"response": [
+				{
+					"name": "https://rss22-ayoub-haddam.cleverapps.io/rss22/xml/0a5a22ee-aab8-4880-a197-bbf62e7aa807",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://rss22-ayoub-haddam.cleverapps.io/rss22/xml/0a5a22ee-aab8-4880-a197-bbf62e7aa806",
+							"protocol": "https",
+							"host": [
+								"rss22-ayoub-haddam",
+								"cleverapps",
+								"io"
+							],
+							"path": [
+								"rss22",
+								"xml",
+								"0a5a22ee-aab8-4880-a197-bbf62e7aa806"
+							]
+						}
+					},
+					"status": "Not Found",
+					"code": 404,
+					"_postman_previewlanguage": "xml",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/xml"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 10 May 2022 17:21:31 GMT"
+						},
+						{
+							"key": "Sozu-Id",
+							"value": "01G2QFV0KAWY16B2X0VM07DYNC"
+						}
+					],
+					"cookie": [],
+					"body": "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?>\n<rss:response xmlns:rss=\"http://univrouen.fr/rss22\">\n    <rss:guid>0a5a22ee-aab8-4880-a197-bbf62e7aa806</rss:guid>\n    <rss:status>ERROR</rss:status>\n    <rss:description>l'article demandé n'existe pas</rss:description>\n</rss:response>"
+				}
+			]
+		},
+		{
+			"name": "https://rss22-ayoub-haddam.cleverapps.io/rss22/insert",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "<?xml version=\"1.0\" encoding=\"UTF-8\" ?>\r\n<rss:feed lang=\"string\" xmlns:rss=\"http://univrouen.fr/rss22\">\r\n  <rss:title>Nouveau Flux</rss:title>\r\n  <rss:pubDate>2022-03-22 20:20:10.010Z</rss:pubDate>\r\n  <rss:copyright>univrouen 2022</rss:copyright>\r\n  <!--1 or more repetitions:-->\r\n  <rss:link rel=\"alternate\" type=\"text/plain+xml\" href=\"http://www.company.org/sonoras/aeoliam\"/>\r\n  <!--1 to 10 repetitions:-->\r\n  <rss:item>\r\n    <rss:title>Mon Article</rss:title>\r\n    <!--1 or more repetitions:-->\r\n    <rss:category term=\"cat1\"/>\r\n    <rss:category term=\"cat2\"/>\r\n    <!--You have a CHOICE of the next 2 items at this level-->\r\n    <rss:published>2015-02-22 20:20:10.010</rss:published>\r\n    <!--Optional:-->\r\n    <rss:image type=\"PNG\" href=\"https://picsum.photos/500/300\" alt=\"image du flux\" length=\"3\"/>\r\n    <rss:content type=\"src\" href=\"http://www.corp.gov/sceptra/et\">string</rss:content>\r\n    <!--You have a CHOICE of the next 2 items at this level-->\r\n    <rss:author>\r\n      <rss:name>Anthony Kasper</rss:name>\r\n      <!--Optional:-->\r\n      <rss:email>t@t.fr</rss:email>\r\n      <!--Optional:-->\r\n      <rss:uri rel=\"self\" type=\"text/html\" href=\"http://www.any.org/speluncis/profundum\"/>\r\n    </rss:author>\r\n    <rss:author>\r\n      <rss:name>Sophy Jose</rss:name>\r\n    </rss:author>\r\n  </rss:item>\r\n  <rss:item>\r\n    <rss:title>autre article</rss:title>\r\n    <!--1 or more repetitions:-->\r\n    <rss:category term=\"cat2\"/>\r\n    <!--You have a CHOICE of the next 2 items at this level-->\r\n    <rss:published>2011-02-10 20:20:10.010</rss:published>\r\n    <!--Optional:-->\r\n    <rss:image type=\"PNG\" href=\"https://picsum.photos/500/300\" alt=\"image du flux\" length=\"3\"/>\r\n    <rss:content type=\"src\" href=\"http://www.corp.gov/sceptra/et\">string</rss:content>\r\n    <!--You have a CHOICE of the next 2 items at this level-->\r\n    <rss:author>\r\n      <rss:name>Sebastien Forver</rss:name>\r\n      <!--Optional:-->\r\n      <rss:email>t@t.fr</rss:email>\r\n      <!--Optional:-->\r\n      <rss:uri rel=\"self\" type=\"text/html\" href=\"http://www.any.org/speluncis/profundum\"/>\r\n    </rss:author>\r\n    <rss:contributor/>\r\n  </rss:item>\r\n</rss:feed>",
+					"options": {
+						"raw": {
+							"language": "xml"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://rss22-ayoub-haddam.cleverapps.io/rss22/insert",
+					"protocol": "https",
+					"host": [
+						"rss22-ayoub-haddam",
+						"cleverapps",
+						"io"
+					],
+					"path": [
+						"rss22",
+						"insert"
+					]
+				},
+				"description": "insertion du flux xml erroné"
+			},
+			"response": [
+				{
+					"name": "https://rss22-ayoub-haddam.cleverapps.io/rss22/insert",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "<?xml version=\"1.0\" encoding=\"UTF-8\" ?>\r\n<rss:feed lang=\"string\" xmlns:rss=\"http://univrouen.fr/rss22\">\r\n  <rss:title>Nouveau Flux</rss:title>\r\n  <rss:pubDate>2022-03-22 20:20:10.010Z</rss:pubDate>\r\n  <rss:copyright>univrouen 2022</rss:copyright>\r\n  <!--1 or more repetitions:-->\r\n  <rss:link rel=\"alternate\" type=\"text/plain+xml\" href=\"http://www.company.org/sonoras/aeoliam\"/>\r\n  <!--1 to 10 repetitions:-->\r\n  <rss:item>\r\n    <rss:title>Mon Article</rss:title>\r\n    <!--1 or more repetitions:-->\r\n    <rss:category term=\"cat1\"/>\r\n    <rss:category term=\"cat2\"/>\r\n    <!--You have a CHOICE of the next 2 items at this level-->\r\n    <rss:published>2015-02-22 20:20:10.010</rss:published>\r\n    <!--Optional:-->\r\n    <rss:image type=\"PNG\" href=\"https://picsum.photos/500/300\" alt=\"image du flux\" length=\"3\"/>\r\n    <rss:content type=\"src\" href=\"http://www.corp.gov/sceptra/et\">string</rss:content>\r\n    <!--You have a CHOICE of the next 2 items at this level-->\r\n    <rss:author>\r\n      <rss:name>Anthony Kasper</rss:name>\r\n      <!--Optional:-->\r\n      <rss:email>t@t.fr</rss:email>\r\n      <!--Optional:-->\r\n      <rss:uri rel=\"self\" type=\"text/html\" href=\"http://www.any.org/speluncis/profundum\"/>\r\n    </rss:author>\r\n    <rss:author>\r\n      <rss:name>Sophy Jose</rss:name>\r\n    </rss:author>\r\n  </rss:item>\r\n  <rss:item>\r\n    <rss:title>autre article</rss:title>\r\n    <!--1 or more repetitions:-->\r\n    <rss:category term=\"cat2\"/>\r\n    <!--You have a CHOICE of the next 2 items at this level-->\r\n    <rss:published>2011-02-10 20:20:10.010</rss:published>\r\n    <!--Optional:-->\r\n    <rss:image type=\"PNG\" href=\"https://picsum.photos/500/300\" alt=\"image du flux\" length=\"3\"/>\r\n    <rss:content type=\"src\" href=\"http://www.corp.gov/sceptra/et\">string</rss:content>\r\n    <!--You have a CHOICE of the next 2 items at this level-->\r\n    <rss:author>\r\n      <rss:name>Sebastien Forver</rss:name>\r\n      <!--Optional:-->\r\n      <rss:email>t@t.fr</rss:email>\r\n      <!--Optional:-->\r\n      <rss:uri rel=\"self\" type=\"text/html\" href=\"http://www.any.org/speluncis/profundum\"/>\r\n    </rss:author>\r\n    <rss:contributor/>\r\n  </rss:item>\r\n</rss:feed>",
+							"options": {
+								"raw": {
+									"language": "xml"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://rss22-ayoub-haddam.cleverapps.io/rss22/insert",
+							"protocol": "https",
+							"host": [
+								"rss22-ayoub-haddam",
+								"cleverapps",
+								"io"
+							],
+							"path": [
+								"rss22",
+								"insert"
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "xml",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/xml"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 10 May 2022 17:30:40 GMT"
+						},
+						{
+							"key": "Sozu-Id",
+							"value": "01G2QGBS6ZN23VSDJRQ7ZW5KA4"
+						}
+					],
+					"cookie": [],
+					"body": "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?>\n<rss:response xmlns:rss=\"http://univrouen.fr/rss22\">\n    <rss:status>Error</rss:status>\n    <rss:description>cvc-complex-type.2.4.b: The content of element 'rss:contributor' is not complete. One of '{\"http://univrouen.fr/rss22\":name, \"http://univrouen.fr/rss22\":email, \"http://univrouen.fr/rss22\":uri}' is expected.</rss:description>\n</rss:response>"
+				}
+			]
+		},
+		{
+			"name": "https://rss22-ayoub-haddam.cleverapps.io/rss22/insert",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "<?xml version=\"1.0\" encoding=\"UTF-8\" ?>\r\n<rss:feed lang=\"string\" xmlns:rss=\"http://univrouen.fr/rss22\">\r\n  <rss:title>Nouveau Flux</rss:title>\r\n  <rss:pubDate>2022-03-22 20:20:10.010Z</rss:pubDate>\r\n  <rss:copyright>univrouen 2022</rss:copyright>\r\n  <!--1 or more repetitions:-->\r\n  <rss:link rel=\"alternate\" type=\"text/plain+xml\" href=\"http://www.company.org/sonoras/aeoliam\"/>\r\n  <!--1 to 10 repetitions:-->\r\n  <rss:item>\r\n    <rss:title>Mon Article</rss:title>\r\n    <!--1 or more repetitions:-->\r\n    <rss:category term=\"cat1\"/>\r\n    <rss:category term=\"cat2\"/>\r\n    <!--You have a CHOICE of the next 2 items at this level-->\r\n    <rss:published>2015-02-22 20:20:10.010</rss:published>\r\n    <!--Optional:-->\r\n    <rss:image type=\"PNG\" href=\"https://picsum.photos/500/300\" alt=\"image du flux\" length=\"3\"/>\r\n    <rss:content type=\"src\" href=\"http://www.corp.gov/sceptra/et\">string</rss:content>\r\n    <!--You have a CHOICE of the next 2 items at this level-->\r\n    <rss:author>\r\n      <rss:name>Anthony Kasper</rss:name>\r\n      <!--Optional:-->\r\n      <rss:email>t@t.fr</rss:email>\r\n      <!--Optional:-->\r\n      <rss:uri rel=\"self\" type=\"text/html\" href=\"http://www.any.org/speluncis/profundum\"/>\r\n    </rss:author>\r\n    <rss:author>\r\n      <rss:name>Sophy Jose</rss:name>\r\n    </rss:author>\r\n  </rss:item>\r\n  <rss:item>\r\n    <rss:title>autre article</rss:title>\r\n    <!--1 or more repetitions:-->\r\n    <rss:category term=\"cat2\"/>\r\n    <!--You have a CHOICE of the next 2 items at this level-->\r\n    <rss:published>2011-02-10 20:20:10.010</rss:published>\r\n    <!--Optional:-->\r\n    <rss:image type=\"PNG\" href=\"https://picsum.photos/500/300\" alt=\"image du flux\" length=\"3\"/>\r\n    <rss:content type=\"src\" href=\"http://www.corp.gov/sceptra/et\">string</rss:content>\r\n    <!--You have a CHOICE of the next 2 items at this level-->\r\n    <rss:author>\r\n      <rss:name>Sebastien Forver</rss:name>\r\n      <!--Optional:-->\r\n      <rss:email>t@t.fr</rss:email>\r\n      <!--Optional:-->\r\n      <rss:uri rel=\"self\" type=\"text/html\" href=\"http://www.any.org/speluncis/profundum\"/>\r\n    </rss:author>\r\n    <rss:contributor>\r\n    <rss:name>Raser Ford</rss:name>\r\n    </rss:contributor>\r\n  </rss:item>\r\n</rss:feed>",
+					"options": {
+						"raw": {
+							"language": "xml"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://rss22-ayoub-haddam.cleverapps.io/rss22/insert",
+					"protocol": "https",
+					"host": [
+						"rss22-ayoub-haddam",
+						"cleverapps",
+						"io"
+					],
+					"path": [
+						"rss22",
+						"insert"
+					]
+				},
+				"description": "insertion du flux xml"
+			},
+			"response": [
+				{
+					"name": "https://rss22-ayoub-haddam.cleverapps.io/rss22/insert",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "<?xml version=\"1.0\" encoding=\"UTF-8\" ?>\r\n<rss:feed lang=\"string\" xmlns:rss=\"http://univrouen.fr/rss22\">\r\n  <rss:title>Nouveau Flux</rss:title>\r\n  <rss:pubDate>2022-03-22 20:20:10.010Z</rss:pubDate>\r\n  <rss:copyright>univrouen 2022</rss:copyright>\r\n  <!--1 or more repetitions:-->\r\n  <rss:link rel=\"alternate\" type=\"text/plain+xml\" href=\"http://www.company.org/sonoras/aeoliam\"/>\r\n  <!--1 to 10 repetitions:-->\r\n  <rss:item>\r\n    <rss:title>Mon Article</rss:title>\r\n    <!--1 or more repetitions:-->\r\n    <rss:category term=\"cat1\"/>\r\n    <rss:category term=\"cat2\"/>\r\n    <!--You have a CHOICE of the next 2 items at this level-->\r\n    <rss:published>2015-02-22 20:20:10.010</rss:published>\r\n    <!--Optional:-->\r\n    <rss:image type=\"PNG\" href=\"https://picsum.photos/500/300\" alt=\"image du flux\" length=\"3\"/>\r\n    <rss:content type=\"src\" href=\"http://www.corp.gov/sceptra/et\">string</rss:content>\r\n    <!--You have a CHOICE of the next 2 items at this level-->\r\n    <rss:author>\r\n      <rss:name>Anthony Kasper</rss:name>\r\n      <!--Optional:-->\r\n      <rss:email>t@t.fr</rss:email>\r\n      <!--Optional:-->\r\n      <rss:uri rel=\"self\" type=\"text/html\" href=\"http://www.any.org/speluncis/profundum\"/>\r\n    </rss:author>\r\n    <rss:author>\r\n      <rss:name>Sophy Jose</rss:name>\r\n    </rss:author>\r\n  </rss:item>\r\n  <rss:item>\r\n    <rss:title>autre article</rss:title>\r\n    <!--1 or more repetitions:-->\r\n    <rss:category term=\"cat2\"/>\r\n    <!--You have a CHOICE of the next 2 items at this level-->\r\n    <rss:published>2011-02-10 20:20:10.010</rss:published>\r\n    <!--Optional:-->\r\n    <rss:image type=\"PNG\" href=\"https://picsum.photos/500/300\" alt=\"image du flux\" length=\"3\"/>\r\n    <rss:content type=\"src\" href=\"http://www.corp.gov/sceptra/et\">string</rss:content>\r\n    <!--You have a CHOICE of the next 2 items at this level-->\r\n    <rss:author>\r\n      <rss:name>Sebastien Forver</rss:name>\r\n      <!--Optional:-->\r\n      <rss:email>t@t.fr</rss:email>\r\n      <!--Optional:-->\r\n      <rss:uri rel=\"self\" type=\"text/html\" href=\"http://www.any.org/speluncis/profundum\"/>\r\n    </rss:author>\r\n    <rss:contributor>\r\n    <rss:name>Raser Ford</rss:name>\r\n    </rss:contributor>\r\n  </rss:item>\r\n</rss:feed>",
+							"options": {
+								"raw": {
+									"language": "xml"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://rss22-ayoub-haddam.cleverapps.io/rss22/insert",
+							"protocol": "https",
+							"host": [
+								"rss22-ayoub-haddam",
+								"cleverapps",
+								"io"
+							],
+							"path": [
+								"rss22",
+								"insert"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "xml",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/xml"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 10 May 2022 17:31:48 GMT"
+						},
+						{
+							"key": "Sozu-Id",
+							"value": "01G2QGDV45JFP7P9NFE1RDB1D2"
+						}
+					],
+					"cookie": [],
+					"body": "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?>\n<rss:response xmlns:rss=\"http://univrouen.fr/rss22\">\n    <rss:guid>d986b9bd-2068-4416-b2c8-3128996b1a49</rss:guid>\n    <rss:status>INSERTED</rss:status>\n    <rss:description>Le flux a été ajouté avec succès</rss:description>\n</rss:response>"
+				},
+				{
+					"name": "https://rss22-ayoub-haddam.cleverapps.io/rss22/insert",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "<?xml version=\"1.0\" encoding=\"UTF-8\" ?>\r\n<rss:feed lang=\"string\" xmlns:rss=\"http://univrouen.fr/rss22\">\r\n  <rss:title>Nouveau Flux</rss:title>\r\n  <rss:pubDate>2022-03-22 20:20:10.010Z</rss:pubDate>\r\n  <rss:copyright>univrouen 2022</rss:copyright>\r\n  <!--1 or more repetitions:-->\r\n  <rss:link rel=\"alternate\" type=\"text/plain+xml\" href=\"http://www.company.org/sonoras/aeoliam\"/>\r\n  <!--1 to 10 repetitions:-->\r\n  <rss:item>\r\n    <rss:title>Mon Article</rss:title>\r\n    <!--1 or more repetitions:-->\r\n    <rss:category term=\"cat1\"/>\r\n    <rss:category term=\"cat2\"/>\r\n    <!--You have a CHOICE of the next 2 items at this level-->\r\n    <rss:published>2015-02-22 20:20:10.010</rss:published>\r\n    <!--Optional:-->\r\n    <rss:image type=\"PNG\" href=\"https://picsum.photos/500/300\" alt=\"image du flux\" length=\"3\"/>\r\n    <rss:content type=\"src\" href=\"http://www.corp.gov/sceptra/et\">string</rss:content>\r\n    <!--You have a CHOICE of the next 2 items at this level-->\r\n    <rss:author>\r\n      <rss:name>Anthony Kasper</rss:name>\r\n      <!--Optional:-->\r\n      <rss:email>t@t.fr</rss:email>\r\n      <!--Optional:-->\r\n      <rss:uri rel=\"self\" type=\"text/html\" href=\"http://www.any.org/speluncis/profundum\"/>\r\n    </rss:author>\r\n    <rss:author>\r\n      <rss:name>Sophy Jose</rss:name>\r\n    </rss:author>\r\n  </rss:item>\r\n  <rss:item>\r\n    <rss:title>autre article</rss:title>\r\n    <!--1 or more repetitions:-->\r\n    <rss:category term=\"cat2\"/>\r\n    <!--You have a CHOICE of the next 2 items at this level-->\r\n    <rss:published>2011-02-10 20:20:10.010</rss:published>\r\n    <!--Optional:-->\r\n    <rss:image type=\"PNG\" href=\"https://picsum.photos/500/300\" alt=\"image du flux\" length=\"3\"/>\r\n    <rss:content type=\"src\" href=\"http://www.corp.gov/sceptra/et\">string</rss:content>\r\n    <!--You have a CHOICE of the next 2 items at this level-->\r\n    <rss:author>\r\n      <rss:name>Sebastien Forver</rss:name>\r\n      <!--Optional:-->\r\n      <rss:email>t@t.fr</rss:email>\r\n      <!--Optional:-->\r\n      <rss:uri rel=\"self\" type=\"text/html\" href=\"http://www.any.org/speluncis/profundum\"/>\r\n    </rss:author>\r\n    <rss:contributor>\r\n    <rss:name>Raser Ford</rss:name>\r\n    </rss:contributor>\r\n  </rss:item>\r\n</rss:feed>",
+							"options": {
+								"raw": {
+									"language": "xml"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://rss22-ayoub-haddam.cleverapps.io/rss22/insert",
+							"protocol": "https",
+							"host": [
+								"rss22-ayoub-haddam",
+								"cleverapps",
+								"io"
+							],
+							"path": [
+								"rss22",
+								"insert"
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "xml",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/xml"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 10 May 2022 17:33:27 GMT"
+						},
+						{
+							"key": "Sozu-Id",
+							"value": "01G2QGGVNFPB3K9XJ62WW9NX32"
+						}
+					],
+					"cookie": [],
+					"body": "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?>\n<rss:response xmlns:rss=\"http://univrouen.fr/rss22\">\n    <rss:status>Error</rss:status>\n    <rss:description>Le flux existe déjà</rss:description>\n</rss:response>"
+				}
+			]
+		},
+		{
+			"name": "https://rss22-ayoub-haddam.cleverapps.io/rss22/resume/xml",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/xml",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://rss22-ayoub-haddam.cleverapps.io/rss22/search?date=2015&titreListe=article;depasse",
+					"protocol": "https",
+					"host": [
+						"rss22-ayoub-haddam",
+						"cleverapps",
+						"io"
+					],
+					"path": [
+						"rss22",
+						"search"
+					],
+					"query": [
+						{
+							"key": "date",
+							"value": "2015"
+						},
+						{
+							"key": "titreListe",
+							"value": "article;depasse"
+						}
+					]
+				},
+				"description": "rechercher articles"
+			},
+			"response": [
+				{
+					"name": "https://rss22-ayoub-haddam.cleverapps.io/rss22/resume/xml",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/xml",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://rss22-ayoub-haddam.cleverapps.io/rss22/search?date=2015&titreListe=article;depasse",
+							"protocol": "https",
+							"host": [
+								"rss22-ayoub-haddam",
+								"cleverapps",
+								"io"
+							],
+							"path": [
+								"rss22",
+								"search"
+							],
+							"query": [
+								{
+									"key": "date",
+									"value": "2015"
+								},
+								{
+									"key": "titreListe",
+									"value": "article;depasse"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "xml",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/xml"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 10 May 2022 17:38:18 GMT"
+						},
+						{
+							"key": "Sozu-Id",
+							"value": "01G2QGSRCDYQC8TDS9PBZRKCK3"
+						}
+					],
+					"cookie": [],
+					"body": "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?>\n<rss:items xmlns:rss=\"http://univrouen.fr/rss22\">\n    <rss:item guid=\"f4d37064-4ccb-447e-8790-f8812b17942c\">\n        <rss:title>Mon Article</rss:title>\n        <rss:date>2015-02-22T20:20:10.010Z</rss:date>\n    </rss:item>\n    <rss:item guid=\"f613f52b-1477-4f8e-a17b-0f9a6e14b206\">\n        <rss:title>Element 02 qui depasse les 45 caracteres et qui va etre coupe</rss:title>\n        <rss:date>2022-02-10T20:20:10.010Z</rss:date>\n    </rss:item>\n</rss:items>"
+				}
+			]
+		},
+		{
+			"name": "https://rss22-ayoub-haddam.cleverapps.io/rss22/delete/b793deb5-379a-4426-af81-f1e9299eef79",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept": true
+				}
+			},
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/xml",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/xml",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "https://rss22-ayoub-haddam.cleverapps.io/rss22/delete/b793deb5-379a-4426-af81-f1e9299eef79",
+					"protocol": "https",
+					"host": [
+						"rss22-ayoub-haddam",
+						"cleverapps",
+						"io"
+					],
+					"path": [
+						"rss22",
+						"delete",
+						"b793deb5-379a-4426-af81-f1e9299eef79"
+					]
+				},
+				"description": "suppression d'un article"
+			},
+			"response": [
+				{
+					"name": "https://rss22-ayoub-haddam.cleverapps.io/rss22/delete/b793deb5-379a-4426-af81-f1e9299eef79",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/xml",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/xml",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "https://rss22-ayoub-haddam.cleverapps.io/rss22/delete/b793deb5-379a-4426-af81-f1e9299eef79",
+							"protocol": "https",
+							"host": [
+								"rss22-ayoub-haddam",
+								"cleverapps",
+								"io"
+							],
+							"path": [
+								"rss22",
+								"delete",
+								"b793deb5-379a-4426-af81-f1e9299eef79"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "xml",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/xml"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 06 May 2022 14:02:52 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?>\n<rss:response xmlns:rss=\"http://univrouen.fr/rss22\">\n    <rss:guid>b793deb5-379a-4426-af81-f1e9299eef79</rss:guid>\n    <rss:status>DELETED</rss:status>\n    <rss:description>L'article a été supprimé avec succès</rss:description>\n</rss:response>"
+				},
+				{
+					"name": "https://rss22-ayoub-haddam.cleverapps.io/rss22/delete/b793deb5-379a-4426-af81-f1e9299eef79",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/xml",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/xml",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "https://rss22-ayoub-haddam.cleverapps.io/rss22/delete/b793deb5-379a-4426-af81-f1e9299eef79",
+							"protocol": "https",
+							"host": [
+								"rss22-ayoub-haddam",
+								"cleverapps",
+								"io"
+							],
+							"path": [
+								"rss22",
+								"delete",
+								"b793deb5-379a-4426-af81-f1e9299eef79"
+							]
+						}
+					},
+					"status": "Not Found",
+					"code": 404,
+					"_postman_previewlanguage": "xml",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/xml"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 10 May 2022 17:43:23 GMT"
+						},
+						{
+							"key": "Sozu-Id",
+							"value": "01G2QH31PZPNZ05YKTAFS1GN6G"
+						}
+					],
+					"cookie": [],
+					"body": "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?>\n<rss:response xmlns:rss=\"http://univrouen.fr/rss22\">\n    <rss:guid>b793deb5-379a-4426-af81-f1e9299eef79</rss:guid>\n    <rss:status>ERROR</rss:status>\n    <rss:description>l'article demandé n'existe pas</rss:description>\n</rss:response>"
+				}
+			]
+		}
+	]
+}

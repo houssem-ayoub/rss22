@@ -10,7 +10,8 @@ public class ContentORM {
     @Column(name = "content_id")
     private final Long id = null;
     private boolean isLink;
-    @Column(nullable = false)
+    @Lob
+    @Column(nullable = false,columnDefinition = "TEXT")
     private String text;
 
     public ContentORM() {

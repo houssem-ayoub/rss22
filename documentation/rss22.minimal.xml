@@ -1,0 +1,21 @@
+<rss:feed lang="fr" xmlns:rss="http://univrouen.fr/rss22">
+  <rss:title>Flux des article minimal</rss:title>
+  <rss:pubDate>2016-02-21 15:03:15.000</rss:pubDate>
+  <rss:copyright>univ Rouen</rss:copyright>
+  <!--1 or more repetitions:-->
+  <rss:link rel="alternate" type="text/html" href="http://www.company.org/sonoras/aeoliam"/>
+  <!--1 to 10 repetitions:-->
+  <rss:item>
+    <rss:title>Qu est ce qu un article</rss:title>
+    <!--1 or more repetitions:-->
+    <rss:category term="article"/>
+    <!--You have a CHOICE of the next 2 items at this level-->
+    <rss:published>2016-02-12 15:03:15.000</rss:published>
+    <!--Optional:-->
+    <rss:content type="src" href="https://dictionnaire.lerobert.com/guide/articles"/>
+    <!--You have a CHOICE of the next 2 items at this level-->
+    <rss:author>
+      <rss:name>Robert</rss:name>
+    </rss:author>
+  </rss:item>
+</rss:feed>
